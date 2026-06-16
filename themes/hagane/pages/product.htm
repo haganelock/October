@@ -1,9 +1,10 @@
 title = "Product"
 layout = "default"
-url = "/product/:slug"
+url = "/product/:slug/:variant?"
 
 [product]
-product = "{{ :slug }}"
+product = ":slug"
+variant = ":slug"
 ==
 <section class="section py-medium">
     <div class="container">
