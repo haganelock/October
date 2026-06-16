@@ -1,0 +1,11 @@
+title = "Cart"
+layout = "default"
+url = "/cart/:step?"
+
+[cartContainer]
+productPage = "product"
+returnPage = "home"
+==
+<div class="container">
+    {% component 'cartContainer' %}
+</div>

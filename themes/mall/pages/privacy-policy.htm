@@ -1,0 +1,47 @@
+url = "/privacy"
+layout = "default"
+title = "Privacy policy"
+meta_title = "Hagane | Lucchetto keyless per bici e moto Made in Italy | Privacy"
+meta_description = "Hagane è il lucchetto keyless per bici, monopattino, scooter e moto. Realizzato in acciaio temprato, si controlla senza chiavi tramite la app per smartphone"
+
+[viewBag]
+localeMeta_title[en] = "Hagane | Made in Italy Keyless Lock for Bikes and Scooters | Privacy"
+localeMeta_description[en] = "Hagane is the keyless lock for bicycles, scooters and motorcycles. Made of hardened steel, it’s controlled without keys via the smartphone app"
+==
+<section class="section section-masthead pt-large pb-medium" data-arts-os-animation="data-arts-os-animation" data-background-color="var(--color-light-1)">
+    <div class="container">
+        <header class="section-masthead__header justify-content-center">
+            <div class="section-masthead__heading split-text" data-split-text-type="lines,words" data-split-text-set="words">
+                <h1 class="h1 mt-0 mb-0 text-center line-height-1"><span class="orange">Privacy</span> policy</h1>
+            </div>
+        </header>
+    </div>
+</section>
+
+<section class="section section-content" data-arts-os-animation="data-arts-os-animation">
+    <div class="container pb-large">
+        {% if activeLocale == "en" %}
+            <a href="https://www.iubenda.com/privacy-policy/26246490" class="iubenda-white iubenda-noiframe iubenda-embed iubenda-noiframe " title="Privacy Policy ">Privacy Policy</a>
+        {% else %}
+            <a href="https://www.iubenda.com/privacy-policy/35762472" class="iubenda-white iubenda-noiframe iubenda-embed iubenda-noiframe " title="Privacy Policy ">Privacy Policy</a>
+        {% endif %}
+
+        <script type="text/javascript">
+            (function (w,d) {
+                var loader = function () {
+                    var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; 
+                    s.src="https://cdn.iubenda.com/iubenda.js"; 
+                    tag.parentNode.insertBefore(s,tag);
+                }; 
+                if(w.addEventListener) {
+                    w.addEventListener("load", loader, false);
+                }else if(w.attachEvent){
+                    w.attachEvent("onload", loader);
+                }else{
+                    w.onload = loader;
+                }
+            })(window, document);
+        </script>
+        </script>
+    </div>
+</section>

@@ -1,0 +1,50 @@
+{% set price = price|default(item.price()) %}
+
+{# % if item.oldPrice().integer %}
+<div class="card-status-label text-uppercase mt-3">
+    <small>Preorder now <span class="label color-white bg-dark-3 px-2">On sale</span></small>
+</div>
+
+<div class="mall-product__old-price">
+    {% if item.oldPrice().integer %}
+    {{ item.oldPrice().string | raw }}
+    {% endif %}
+</div>
+{% endif %}
+<div class="mall-product__current-price">
+    {% partial __SELF__ ~ '::currentprice' price=price.string %}
+</div>
+<div class="mall-product__current-price">
+    {{ item.price_us }} $
+</div>
+
+{% if item.oldPrice().integer %}
+<div class="mall-product__current-price">
+    {{ item.price_us_old }} $
+</div>
+{% endif % #}
+
+
+
+{% if item.oldPrice().integer %}
+<div class="card-status-label text-uppercase mt-4 mb-3">
+    <small class="font-weight-600">Preorder now <span class="label color-white bg-dark-3 px-2">be the first</span></small>
+</div>
+<div class="mall-products-item__info-secondary h2 text-right line-height-1">
+    <div class="mall-products-item__old-price p-0 mr-4">
+        <span class="line-through">{{ item.oldPrice.count > 0 ? item.oldPrice().string | raw }}</span><br>
+        <!--<small class="line-through">{{ item.price_us_old }} $</small>-->
+    </div>
+{% else %}
+<div class="mall-products-item__info-secondary h2 text-right">
+{% endif %}
+    <div class="mall-products-item__price
+        {{ price.isCustomerSpecific ? 'mall-products-item__price--special' }}">
+        {{ price.string | raw }}<br>
+        <!--<small>{{ item.price_us }} $</small>-->
+    </div>
+</div>
+
+
+
+

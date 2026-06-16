@@ -1,0 +1,239 @@
+url = "/product/:slug/:variant?"
+layout = "default"
+title = "Product"
+
+[product]
+product = ":slug"
+variant = ":slug"
+redirectOnPropertyChange = 0
+currentVariantReviewsOnly = 0
+==
+<?php
+    use OFFLINE\Mall\Models\Product;
+
+    function onStart() {
+        $this['products'] = Product::orderBy('id', 'asc')->get();
+        $this['product'] = $this->components['product']->getProduct();
+        $this['specs'] = null;
+        if (!empty($this['product']) && (!empty($this['product']->specs)) && (count($this['product']->specs) > 0)) {
+            $this['specs'] = $this['product']->specs[0];
+        }
+    }
+?>
+==
+<section class="section section-product-details py-large section-content" data-arts-os-animation="data-arts-os-animation">
+    <div class="container">
+        <div class="mall-product flex-wrap">
+            {% partial 'myinfo' %}
+        </div>
+
+        {# {% partial product ~ '::scripts' %} #}
+
+        {% if product.dataLayer %}
+        {% partial product ~ '::datalayer' %}
+        {% endif %}
+    </div>
+</section>
+
+<!-- section PROPERTIES -->
+{% if specs %}
+<section class="section section-properties section-content pb-medium bg-light-2" data-arts-os-animation="data-arts-os-animation">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-sm-6 section-properties__item mt-small">
+                <div class="figure-info split-text" data-split-text-type="lines,words"
+                     data-split-text-set="words">
+                    <div class="figure-info__option small-caps">{{ 'Colore'|_ }}</div>
+                    <div class="figure-info__value paragraph">{{ specs.color|_ }}</div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 section-properties__item mt-small">
+                <div class="figure-info split-text" data-split-text-type="lines,words"
+                     data-split-text-set="words">
+                    <div class="figure-info__option small-caps">{{ 'Misure'|_ }}</div>
+                    <div class="figure-info__value paragraph">
+                        {{ specs.size }}
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 section-properties__item mt-small">
+                <div class="figure-info split-text" data-split-text-type="lines,words"
+                     data-split-text-set="words">
+                    <div class="figure-info__option small-caps">{{ 'Peso'|_ }}</div>
+                    <div class="figure-info__value paragraph">
+                        {{ specs.weight }}
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 section-properties__item mt-small">
+                <div class="figure-info split-text" data-split-text-type="lines,words"
+                     data-split-text-set="words">
+                    <div class="figure-info__option small-caps">{{ 'Garanzia'|_ }}</div>
+                    <div class="figure-info__value paragraph">{{ specs.warranty|_ }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}
+<!-- - section PROPERTIES -->
+
+
+<!-- section CONTENT #2 -->
+<section class="section section-caratteristiche section-masthead py-large mb-medium bg-dark-2"
+         data-arts-os-animation="data-arts-os-animation" data-arts-theme-text="light"
+         data-background-color="var(--color-dark-2)">
+    <div class="container section">
+        <div class="row">
+            <div class="col">
+                <section class="section section-content clearfix text-center mb-5"
+                         data-arts-os-animation="data-arts-os-animation">
+                    <div class="section-content__inner">
+                        <div class="section-content__heading split-text js-split-text"
+                             data-split-text-type="lines,words" data-split-text-set="words">
+                            <h2>{{ 'Caratteristiche tecniche'|_ }}</h2>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="row justify-content-between mt-small">
+            <div class="col-lg-5">
+                <section class="section section-content clearfix" data-arts-os-animation="data-arts-os-animation">
+                    <div class="section-content__inner">
+                        <div class="w-100"></div>
+                        <div class="section-content__heading split-text js-split-text mb-0-5"
+                             data-split-text-type="lines,words" data-split-text-set="words">
+                            <h4>{{ 'Costruzione'|_ }}</h4>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="col-lg-7">
+                <section class="section section-content clearfix" data-arts-os-animation="data-arts-os-animation">
+                    <div class="section-content__inner">
+                        <div class="w-100"></div>
+                        <div class="section-content__text split-text js-split-text" data-split-text-type="lines"
+                             data-split-text-set="lines">
+                            <p>{{ 'Hagane è costruito in acciaio temprato in grado di opporre la massima resistenza a taglio e perforazione.<br> La finitura tramite cataforesi garantisce una protezione ottimale agli effetti delle intemperie.<br> L’arco è rivestito in Silicon: protegge il lucchetto dagli urti, e la tua due ruote da graffi e strisci. Il tubo che racchiude il cuore elettronico di Hagane è ricoperto da un adesivo catarifrangente protettivo.'|_ }}</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="row justify-content-between mt-small">
+            <div class="col-lg-5">
+                <section class="section section-content clearfix" data-arts-os-animation="data-arts-os-animation">
+                    <div class="section-content__inner">
+                        <div class="w-100"></div>
+                        <div class="section-content__heading split-text js-split-text mb-0-5"
+                             data-split-text-type="lines,words" data-split-text-set="words">
+                            <h4>{{ 'Batteria'|_ }}</h4>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="col-lg-7">
+                <section class="section section-content clearfix" data-arts-os-animation="data-arts-os-animation">
+                    <div class="section-content__inner">
+                        <div class="w-100"></div>
+                        <div class="section-content__text split-text js-split-text" data-split-text-type="lines"
+                             data-split-text-set="lines">
+                            <p> {{ 'La batteria interna garantisce due anni di autonomia con 20 aperture al giorno. Le sue temperature di operatività vanno dai -20° agli 80°.<br> La batteria può essere sostituita.'|_ }}</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="row justify-content-between mt-small">
+            <div class="col-lg-5">
+                <section class="section section-content clearfix" data-arts-os-animation="data-arts-os-animation">
+                    <div class="section-content__inner">
+                        <div class="w-100"></div>
+                        <div class="section-content__heading split-text js-split-text mb-0-5"
+                             data-split-text-type="lines,words" data-split-text-set="words">
+                            <h4>{{ 'Connettività ed elettronica'|_ }}</h4>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="col-lg-7">
+                <section class="section section-content clearfix" data-arts-os-animation="data-arts-os-animation">
+                    <div class="section-content__inner">
+                        <div class="w-100"></div>
+                        <div class="section-content__text split-text js-split-text" data-split-text-type="lines"
+                             data-split-text-set="lines">
+                            <p> {{ 'La comunicazione tra Hagane e lo smartphone registrato avviene tramite Bluetooth Low Energy, che assicura la lunga durata della batteria interna. Il flusso dati viene protetto da un sistema di autenticazione ellittica.<br> La App Hagane prevede la funzione di geolocalizzazione di parking automatica.<br> Il grado di protezione dagli agenti atmosferici del cuore elettronico di Hagane è IP65: è completamente ermetico e protetto da getti d’acqua.'|_ }}</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <!-- - section CONTENT #2 -->
+</section>
+
+{% for detail in current.details %}
+<!-- section SERVICE # 2 -->
+<div>
+<section class="section section-services section-content my-large pt-large"
+         data-arts-os-animation="data-arts-os-animation">
+    <div class="container-fluid section-services__container">
+        <div class="row no-gutters align-items-center justify-content-center">
+            <div class="col-lg-7 order-lg-2">
+                <div class="section-content__image overflow">
+                    <div class="section-content__image-inner">
+                        <section class="section section-image">
+                            <div class="section-image__wrapper" data-arts-parallax="data-arts-parallax"
+                                 data-arts-parallax-factor="0.15">
+                                <div class="lazy">
+                                    <img data-src="{{ detail.image|media }}" src="#" alt="" width="1280" height="853"/>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 order-lg-1">
+                <div class="section-services__wrapper-content">
+                    <section class="section section-content clearfix container-fluid pt-md-0 pb-md-0 pt-small pl-md-0"
+                             data-arts-os-animation="data-arts-os-animation">
+                        <div class="section-content__inner">
+                            <div class="w-100"></div>
+                            <div class="section-content__heading split-text js-split-text"
+                                 data-split-text-type="lines,words" data-split-text-set="words">
+                                <h2 class="h4 mb-3">{{ detail.title|_ }}</h2>
+                            </div>
+                            <div class="w-100"></div>
+                            <div class="section-content__text split-text js-split-text mt-1"
+                                 data-split-text-type="lines" data-split-text-set="lines">
+                                <p>{{ detail.text|raw|_ }}</p>
+                            </div>
+                            <div class="w-100"></div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</div>
+<!-- - section SERVICE # 2 -->
+{% endfor %}
+
+<section class="section section-nav mb-large section-content" data-arts-os-animation="data-arts-os-animation">
+    <div class="container">
+        <p class="row align-items-center justify-content-center">
+            {% for product in products %}
+                {% if (product.slug == current.slug) %}
+                    <span class="mx-5 h4">Hagane {{ product.slug }}</span>
+                {% else %}
+                    <a href="{{ 'product' | page({slug: product.slug}) }}" class="mx-5 h4 color-dark-3">Hagane {{ product.slug }}</a>
+                {% endif %}
+                {% if (loop.last == false) %}
+                    <span>|</span>
+                {% endif %}
+            {% endfor %}
+        </p>
+    </div>
+</section>

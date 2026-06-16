@@ -1,0 +1,127 @@
+url = "/faq"
+layout = "default"
+title = "FAQ"
+meta_title = "Hagane | Domande frequenti sul lucchetto per bici e moto"
+meta_description = "Tutto quello che vuoi sapere prima di comprare il Hagane per proteggere la tua bici o la tua moto. Come si aziona? Protegge il mio mezzo? È davvero robusto? Sì."
+
+[viewBag]
+localeMeta_title[en] = "Hagane | Frequently asked questions about the lock for bicycles and motorcycles"
+localeMeta_description[en] = "Everything you want to know before buying the Hagane to protect your bike or motorbike. How does it work? Does it protect my vehicle? Is it really sturdy? Yup."
+==
+<?php
+use RedMarlin\Faq\Models\Category;
+
+    function onInit() {
+        $this['categories'] = Category::orderBy('id', 'asc')->get();
+    }
+?>
+==
+<!-- section MASTHEAD CONTAINER BOTTOM -->
+<section class="section section-masthead pt-large pb-small text-center" data-arts-os-animation="data-arts-os-animation"
+         data-background-color="var(--color-light-1)">
+    <div class="section-masthead__inner container-fluid">
+        <header class="row section-masthead__header justify-content-center">
+            <div class="col">
+                <div class="section-masthead__heading split-text js-split-text" data-split-text-type="lines,words"
+                     data-split-text-set="words">
+                    <h1 class="h1 mt-0 mb-0">{{ 'Le cose che tutti'|_ }} <span class="orange">{{ 'ci chiedono'|_ }}</span></h1>
+                </div>
+            </div>
+        </header>
+    </div>
+    <!--<div class="container">
+        <div class="mx-auto col-lg-6">
+            <div class="row justify-content-center align-items-end">
+                <div class="col-7 overflow-visible" data-arts-parallax="element" data-arts-parallax-factor="0.5"
+                     data-arts-parallax-x="50%" data-arts-parallax-y="50%" style="left: -15%">
+                    <div class="lazy">
+                        <img class="of-contain" src="#" data-src="{{ 'assets/img/assets/hagane-lock.svg'|theme }}"
+                             width="800" height="1440" alt=""/>
+                    </div>
+                </div>
+                <div class="col-5 overflow-visible" data-arts-parallax="element" data-arts-parallax-x="-50%"
+                     style="left: 15%">
+                    <div class="lazy">
+                        <img class="of-contain" src="#" data-src="{{ 'assets/img/assets/hagane-app.jpg'|theme }}" width="800"
+                             height="1616" alt=""/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>-->
+    <div class="col-lg-12 container">
+      <div class="row align-items-end">
+        <div class="col-lg-12 d-flex justify-content-center align-items-end wrapper-lock">
+          <div class="mr-lg-4 col-lock overflow-visible z-index-1" data-arts-parallax="element" data-arts-parallax-factor="0.5" data-arts-parallax-x="10%">
+            <div class="lazy">
+              <img class="of-contain" src="#" data-src="{{ 'assets/img/assets/lock-frontale.jpg'|theme }}" width="800" height="1272" alt=""/>
+            </div>
+          </div>
+          <div class="ml-lg-4 col-phone overflow-visible pl-lg-0" data-arts-parallax="element" data-arts-parallax-x="-10%">
+            <div class="lazy">
+              <img class="of-contain" src="#" data-src="{{ 'assets/img/assets/hagane-app.jpg'|theme }}" width="800" height="1272" alt=""/>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--<a class="mt-4 button button_lg button_solid bg-dark-3 color-white d-block d-lg-none" data-hover="Be the first" href="{{ '/category/hagane' | app }}">
+        <span class="button__label-hover color-white line-height-1">Preorder now</span>
+      </a>-->
+    </div>
+</section>
+
+
+<!-- section CONTENT #2 -->
+<div class="container section pt-medium pb-medium">
+    {% for category in categories %}
+    <div class="row justify-content-start mt-small pt-small sep-row">
+        <div class="col-lg-4">
+            <section class="section section-content clearfix text-right"
+                     data-arts-os-animation="data-arts-os-animation">
+                <div class="section-content__inner">
+                    <div class="w-100"></div>
+                    <div class="section-content__heading split-text js-split-text mb-0-5"
+                         data-split-text-type="lines,words" data-split-text-set="words">
+                        <h4 class="h2">{{ category.title }}</h4>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="col-lg-7 offset-lg-1">
+            <section class="section section-content sec-faq clearfix" data-arts-os-animation="data-arts-os-animation">
+                <div class="section-content__inner">
+                    <div class="w-100"></div>
+                    <div class="section-content__text split-text js-split-text" data-split-text-type="lines"
+                         data-split-text-set="lines">
+                        <div class="accordion" id="accordionExample">
+                            {% for question in category.question %}
+                            <div class="card">
+                                <div class="card-header" id="headingOne">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link h4 collapsed" type="button" data-toggle="collapse"
+                                                data-target="#collapse{{ question.id }}" aria-expanded="true"
+                                                aria-controls="collapse{{ question.id }}">
+                                            {{ question.question }} <i class="fa fa-chevron-down"></i>
+                                        </button>
+                                    </h5>
+                                </div>
+
+                                <div id="collapse{{ question.id }}" class="collapse" aria-labelledby="headingOne"
+                                     data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <p>{{ question.answer|raw }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+<!-- - section CONTENT #2 -->
+
+{% partial 'cta' %}

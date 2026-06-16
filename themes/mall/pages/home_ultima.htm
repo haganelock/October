@@ -1,0 +1,1001 @@
+url = "/ultima"
+layout = "default"
+title = "Demonstration"
+is_hidden = 1
+==
+{% put styles %}
+
+{% endput %}
+
+<ul id="menu">
+  <li><a href="#overview">Overview</a></li>
+  <li><a href="#features">Features</a></li>
+  <li><a href="#storyboard">Storyboard</a></li>
+  <li><a href="#app">App</a></li>
+  <li><a href="#showcase">Showcase</a></li>
+</ul>
+<div id="wrapper" class="fullp_wrapper">
+  <!-- section MASTHEAD CONTAINER BOTTOM -->
+  <section class="section_full_h panel section section-masthead text-center first d-flex" data-arts-os-animation="data-arts-os-animation" data-background-color="var(--color-light-1)" id="overview">
+    <div class="container align-self-center">
+      <h1 class="h1 mt-0 mb-0 text-center"><span class="orange">Keyless</span> Bike Lock</h1>
+      <div class="row align-items-end lock-box">
+        <div class="offset-lg-3 col-lg-6">
+          <div class="row justify-content-center align-items-end">
+            <div class="col-7 overflow-visible">
+              <div class="lazy">
+                <img class="of-contain" src="#" data-src="{{ 'assets/img/assets/lock-frontale.jpg'|theme }}" width="800" height="1272" alt=""/>
+              </div>
+            </div>
+            <div class="col-4 overflow-visible pl-lg-0">
+              <div class="lazy">
+                <img class="of-contain" src="#" data-src="{{ 'assets/img/assets/phone.jpg'|theme }}" width="600" height="1212" alt=""/>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <a class="mt-4 button button_lg button_solid bg-dark-3 color-white" data-hover="Preorder now!" href="{{ 'products'|page }}" target="_blank">
+            <span class="button__label-hover color-white line-height-1">Preorder now<span class="d-block color-dark-1">Save 50%</span></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section_full_h d-flex">
+    <div class="container align-self-center text-center">
+      <h2>Ti portano <span class="color-dark-3">ovunque</span>. 
+        Sono <span class="color-dark-3">fedeli</span>. <br>E sappiamo quanto le ami. 
+        <br>Perdere le tue due ruote è un trauma. <br>Risparmiatelo con <span class="color-dark-3">Hagane</span>.
+      </h2>
+    </div>
+  </section>
+
+
+  <section class="section_full_h">
+    <div class="h-100 lazy-bg bike-box" data-src="{{ 'assets/img/assets/bike/bike-1.jpg'|theme }}"></div>
+  </section>
+  <section class="section_full_h">
+    <div class="h-100 lazy-bg bike-box" data-src="{{ 'assets/img/assets/bike/bike-2.jpg'|theme }}"></div>
+  </section>
+  <section class="section_full_h">
+    <div class="h-100 lazy-bg bike-box" data-src="{{ 'assets/img/assets/bike/bike-7.jpg'|theme }}"></div>
+  </section>
+
+
+ <!--<section class="section_full_h" style="background-image: url({{ 'assets/img/assets/bike/bike-2.jpg'|theme }})"></section>
+   <section class="section_full_h" style="background-image: url({{ 'assets/img/assets/bike/bike-3.jpg'|theme }})"></section>
+  <section class="section_full_h" style="background-image: url({{ 'assets/img/assets/bike/bike-4.jpg'|theme }})"></section>
+  <section class="section_full_h" style="background-image: url({{ 'assets/img/assets/bike/bike-5.jpg'|theme }})"></section>-->
+  <!--<section class="section_full_h" style="background-image: url({{ 'assets/img/assets/bike/bike-6.jpg'|theme }})"></section>
+  <section class="section_full_h" style="background-image: url({{ 'assets/img/assets/bike/bike-7.jpg'|theme }})"></section>
+  <section class="section_full_h" style="background-image: url({{ 'assets/img/assets/bike/bike-8.jpg'|theme }})"></section>-->
+
+  <section class="section_full_h section section-content text-center" data-arts-os-animation="true">
+    <div class="container h-100 d-flex align-items-center justify-content-center">
+      <div class="section-content__heading split-text js-split-text" data-split-text-type="lines,words" data-split-text-set="words">
+        <h2 class="h1 line-height-1">Robusto. Keyless. Smart. <br><span class="color-dark-3">Per sempre.</span></h2>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- section PROJECTS SLIDER FULLSCREEN -->
+
+  <section class="section_full_h section section-fullheight section-product-features section-projects section-projects-slider" data-arts-theme-text="dark" data-arts-os-animation id="features">
+    <div class="section-fullheight__inner section-fullheight__inner_mobile">
+      <div class="slider  slider-fullscreen-projects js-slider-fullscreen-projects js-slider-reveal js-slider text-center">
+        <!-- slider CONTENT -->
+        <div class="slider-fullscreen-projects__content swiper-container js-slider-fullscreen-projects__content container mx-auto">
+          <div class="swiper-wrapper text-left">
+            <div class="swiper-slide-0 swiper-slide row justify-content-between align-items-center">
+              <div class="col-lg-3 bg-light-1 slideInUp">
+                <h2 class="h3 slider__heading">Il lucchetto</h2>
+                <p>Hagane è il primo lucchetto ad apertura keyless per bici, scooter e moto prodotto in Italia. Ma non fare l’errore di considerarlo smart e basta. Hagane è soprattutto la robustezza di 18 mm di acciaio.</p>
+                <a href="{{ 'products'|page }}" class="button button button_bordered mt-3">PREORDER NOW -  SAVE 50%</a>
+              </div>
+              <div class="slideInUp col-lg-5 slider__images-slide-inner js-transition-img align-self-center h-auto">
+                <img class="js-transition-img__transformed-el" src="{{ 'assets/img/assets/lock_1.jpg'|theme }}">
+              </div>
+              <div class="col-lg-3">
+                <div class="feature">
+                  <h4>Robusto</h4>
+                  <p>Ce lo portiamo nel nome. Per i giapponesi Hagane è acciaio. Per noi è la garanzia di aver scelto il più solido dei materiali.</p>
+                </div>
+                <div class="feature">
+                  <h4>Smart</h4>
+                  <p>Hagane, la sua app, il tuo smartphone. Per proteggere la tua bici non hai bisogno di altro.</p>
+                </div>
+                <div class="feature">
+                  <h4>Keyless</h4>
+                  <p>Vuoi ridurre al minimo i malintenzionati che ronzano attorno alla tua bici? Niente chiave e niente serratura: fatto.</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide-1 swiper-slide row justify-content-between align-items-center">
+              <div class="col-lg-3 bg-light-1 slideInUp">
+                <h2 class="h3 slider__heading">Acciaio</h2>
+                <p>Hagane è il primo lucchetto ad apertura keyless per bici, scooter e moto prodotto in Italia. Ma non fare l’errore di considerarlo smart e basta. Hagane è soprattutto la robustezza di 18 mm di acciaio.</p>
+                <a href="{{ 'products'|page }}" class="button button button_bordered mt-3">PREORDER NOW -  SAVE 50%</a>
+              </div>
+              <div class="slideInUp col-lg-5 slider__images-slide-inner js-transition-img align-self-center h-auto">
+                <img class="js-transition-img__transformed-el" src="{{ 'assets/img/assets/lock_2.jpg'|theme }}">
+              </div>
+              <div class="col-lg-4">
+                <div class="feature">
+                  <h4>Resistente agli agenti atmosferici</h4>
+                  <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod</p>
+                </div>
+                <div class="feature">
+                  <h4>Delicato</h4>
+                  <p>Sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolor</p>
+                </div>
+                <div class="feature">
+                  <h4>Adesivo rifrangente</h4>
+                  <p>Sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolor</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide-2 swiper-slide row justify-content-between align-items-center">
+              <div class="col-lg-3 bg-light-1 slideInUp">
+                <h2 class="h3 slider__heading">Il sistema Hagane</h2>
+                <p>Hagane è il primo lucchetto ad apertura keyless per bici, scooter e moto prodotto in Italia. Ma non fare l’errore di considerarlo smart e basta. Hagane è soprattutto la robustezza di 18 mm di acciaio.</p>
+                <a href="{{ 'products'|page }}" class="button button button_bordered mt-3">PREORDER NOW -  SAVE 50%</a>
+              </div>
+
+              <div class="slideInUp col-lg-5 slider__images-slide-inner js-transition-img align-self-center h-auto">
+                <img class="js-transition-img__transformed-el" src="{{ 'assets/img/assets/lock_3.jpg'|theme }}">
+              </div>
+              <div class="col-lg-4">
+                <div class="feature">
+                  <h4>Pulsante di apertura</h4>
+                  <p>Una volta sbloccato, basta un dito. Non serve altro. Davvero. È inutile che leggi oltre.</p>
+                </div>
+                <div class="feature">
+                  <h4>Sempre connesso</h4>
+                  <p>Hagane è sempre connesso, e basta avvicinare il telefono per sbloccarlo. Spoiler: non serve neanche averlo in mano.</p>
+                </div>
+                <div class="feature">
+                  <h4>Connessione Bluetooth LE</h4>
+                  <p>Se stai pensando “mi scarica il telefono”, ti abbiamo prevenuto: non lo fa. È a basso consumo, baby.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- - slider CONTENT -->
+        <!-- slider FOOTER -->
+        <div class="container-fluid slider-fullscreen-projects__footer">
+          <div class="row justify-content-center">
+            <div class="col-lg-4">
+              <!-- slider DOTS -->
+              <div class="slider__dots js-slider__dots">
+                <div class="slider__dot slider__dot_active">
+                  <svg class="svg-circle" xmlns="http://www.w3.org/2000/svg" width="265" height="4" viewBox="0 0 265 4">
+                    <rect id="Rectangle_39" data-name="Rectangle 39" width="265" height="4" rx="2" fill="#25282a"/>
+                  </svg>
+                </div>
+                <div class="slider__dot">
+                  <svg class="svg-circle" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <circle class="circle" cx="30" cy="30" r="29" fill="none"></circle>
+                  </svg>
+                </div>
+                <div class="slider__dot">
+                  <svg class="svg-circle" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <circle class="circle" cx="30" cy="30" r="29" fill="none"></circle>
+                  </svg>
+                </div>
+                <div class="slider__dot">
+                  <svg class="svg-circle" xmlns="http://www.w3.org/2000/svg" width="265" height="4" viewBox="0 0 265 4">
+                    <rect id="Rectangle_39" data-name="Rectangle 39" width="265" height="4" rx="2" fill="#25282a"/>
+                  </svg>
+                </div>
+              </div>
+              <!-- - slider DOTS -->
+            </div>
+          </div>
+        </div>
+        <!-- - slider FOOTER -->
+        <!-- slider COUNTER -->
+        <div class="slider__wrapper-counter slider-fullscreen-projects__counter slider-fullscreen-projects__counter_centered">
+          <div class="slider__counter slider__counter_current slider__counter_current-huge">
+            <div class="js-slider-fullscreen-projects__counter-current swiper-container">
+              <div class="swiper-wrapper"></div>
+            </div>
+          </div>
+        </div>
+        <!-- - slider COUNTER -->
+
+        <!-- slider IMAGES -->
+        <div class="slider-fullscreen-projects__images swiper-container js-slider-fullscreen-projects__images"  data-direction="horizontal" data-speed="800" data-autoplay-enabled="true" data-autoplay-delay="6000">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide row overflow"></div>
+            <div class="swiper-slide row overflow"></div>
+            <div class="swiper-slide row overflow"></div>
+          </div>
+          <!-- overlay-->
+          <!--<div class="slider__overlay overlay overlay_circle-dark overlay_deither"></div>
+          <div class="slider__circle"></div>-->
+          <!-- - overlay -->
+        </div>
+        <!-- - slider IMAGES -->
+        <!-- slider ARROWS 
+        <div class="slider__arrow slider__arrow_left slider__arrow_absolute js-slider__arrow-prev">
+          <div class="arrow arrow-left js-arrow" data-arts-cursor="data-arts-cursor" data-arts-cursor-hide-native="true" data-arts-cursor-scale="0" data-arts-cursor-magnetic="data-arts-cursor-magnetic">
+            <svg class="svg-circle" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <circle class="circle" cx="30" cy="30" r="29" fill="none"></circle>
+            </svg>
+            <div class="arrow__pointer arrow-left__pointer"></div>
+            <div class="arrow__triangle"></div>
+          </div>
+        </div>
+        <div class="slider__arrow slider__arrow_right slider__arrow_absolute js-slider__arrow-next">
+          <div class="arrow arrow-right js-arrow" data-arts-cursor="data-arts-cursor" data-arts-cursor-hide-native="true" data-arts-cursor-scale="0" data-arts-cursor-magnetic="data-arts-cursor-magnetic">
+            <svg class="svg-circle" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <circle class="circle" cx="30" cy="30" r="29" fill="none"></circle>
+            </svg>
+            <div class="arrow__pointer arrow-right__pointer"></div>
+            <div class="arrow__triangle"></div>
+          </div>
+        </div>-->
+        <!-- - slider ARROWS -->
+      </div>
+      <div class="text-center centered-link">
+        <p><a href="{{ 'specs'|page }}" class="underline d-inline-block">Scopri le caratteristiche tecniche</a></p>
+      </div>
+    </div>
+  </section>
+  <!-- - section PROJECTS SLIDER FULLSCREEN -->
+
+<div class="storyboard-wrapper" style="height: 100vh;" id="storyboard">
+  <div class="section_full_h bg-dark-2 section-dark">
+    <div class="pin-up pin-up-storyboard">
+      <div class="content-wrap content-wrap-storyboard">
+        <section class="item-content item-content-0 initial section section--large vw-100 h-100 d-flex justify-content-center lazy-bg" data-src="{{ 'assets/img/assets/storyboard/storyboard-1.jpg'|theme }}">
+          <h3 class="h3 col-lg-6 color-white my-small">Dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod</h3>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <div class="section_full_h bg-dark-2 section-dark" id="">
+    <div class="pin-up pin-up-storyboard">
+      <div class="content-wrap content-wrap-storyboard">
+        <section class="item-content item-content-0 initial section section--large vw-100 h-100 d-flex justify-content-center lazy-bg" data-src="{{ 'assets/img/assets/storyboard/storyboard-2.jpg'|theme }}">
+          <h3 class="h3 col-lg-6 color-white my-small">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod</h3>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <div class="section_full_h bg-dark-2 section-dark" id="">
+    <div class="pin-up pin-up-storyboard">
+      <div class="content-wrap content-wrap-storyboard">
+        <section class="item-content item-content-0 initial section section--large vw-100 h-100 d-flex justify-content-center lazy-bg" data-src="{{ 'assets/img/assets/storyboard/storyboard-3.jpg'|theme }}">
+          <h3 class="h3 col-lg-6 color-white my-small">Diam nonumy eirmod amet, consetetur sadipscing elitr, sed diam </h3>
+        </section>
+      </div>
+    </div>
+  </div>
+  <div class="section_full_h bg-dark-2 section-dark" id="">
+    <div class="pin-up pin-up-storyboard">
+      <div class="content-wrap content-wrap-storyboard">
+        <section class="item-content item-content-0 initial section section--large vw-100 h-100 d-flex justify-content-center lazy-bg" data-src="{{ 'assets/img/assets/storyboard/storyboard-4.jpg'|theme }}">
+          <h3 class="h3 col-lg-6 color-white my-small">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod</h3>
+        </section>
+      </div>
+    </div>
+  </div>
+  <div class="section_full_h bg-dark-2 section-dark" id="">
+    <div class="pin-up pin-up-storyboard">
+      <div class="content-wrap content-wrap-storyboard">
+        <section class="item-content item-content-0 initial section section--large vw-100 h-100 d-flex justify-content-center lazy-bg" data-src="{{ 'assets/img/assets/storyboard/storyboard-5.jpg'|theme }}">
+          <h3 class="h3 col-lg-6 color-white my-small">Lorem ipsum dolor sit amet, consetetur sadipscing elitr</h3>
+        </section>
+      </div>
+    </div>
+  </div>
+  <div class="section_full_h bg-dark-2 section-dark" id="">
+    <div class="pin-up pin-up-storyboard">
+      <div class="content-wrap content-wrap-storyboard">
+        <section class="item-content item-content-0 initial section section--large vw-100 h-100 d-flex justify-content-center lazy-bg" data-src="{{ 'assets/img/assets/storyboard/storyboard-6.jpg'|theme }}">
+          <h3 class="h3 col-lg-6 color-white my-small">Consetetur sadipscing elitr, sed diam nonumy eirmod</h3>
+        </section>
+      </div>
+    </div>
+  </div>
+  <div class="section_full_h bg-dark-2 section-dark" id="">
+    <div class="pin-up pin-up-storyboard">
+      <div class="content-wrap content-wrap-storyboard">
+        <section class="item-content item-content-0 initial section section--large vw-100 h-100 d-flex justify-content-center lazy-bg" data-src="{{ 'assets/img/assets/storyboard/storyboard-7.jpg'|theme }}">
+          <h3 class="h3 col-lg-6 color-white my-small">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod</h3>
+        </section>
+      </div>
+    </div>
+  </div>
+  <div class="section_full_h bg-dark-2 section-dark" id="">
+    <div class="pin-up pin-up-storyboard">
+      <div class="content-wrap content-wrap-storyboard">
+        <section class="item-content item-content-0 initial section section--large vw-100 h-100 d-flex justify-content-center lazy-bg" data-src="{{ 'assets/img/assets/storyboard/storyboard-8.jpg'|theme }}">
+          <h3 class="h3 col-lg-6 color-white my-small">Consetetur sadipscing elitr, lorem ipsum dolor sit amet sed diam nonumy</h3>
+        </section>
+      </div>
+    </div>
+  </div>
+  <div class="section_full_h bg-dark-2 section-dark" id="">
+    <div class="pin-up pin-up-storyboard">
+      <div class="content-wrap content-wrap-storyboard">
+        <section class="item-content item-content-0 initial section section--large vw-100 h-100 d-flex justify-content-center lazy-bg" data-src="{{ 'assets/img/assets/storyboard/storyboard-9.jpg'|theme }}">
+          <h3 class="h3 col-lg-6 color-white my-small">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod</h3>
+        </section>
+      </div>
+    </div>
+  </div>
+  <div class="section_full_h bg-dark-2 section-dark" id="">
+    <div class="pin-up pin-up-storyboard">
+      <div class="content-wrap content-wrap-storyboard">
+        <section class="item-content item-content-0 initial section section--large vw-100 h-100 d-flex justify-content-center lazy-bg" data-src="{{ 'assets/img/assets/storyboard/storyboard-10.jpg'|theme }}">
+          <h3 class="h3 col-lg-6 color-white my-small">Consetetur lorem ipsum dolor sit amet sadipscing elitr, sed diam nonumy</h3>
+        </section>
+      </div>
+    </div>
+  </div>
+  <div class="section_full_h bg-dark-2 section-dark" id="">
+    <div class="pin-up pin-up-storyboard section-dark">
+      <div class="content-wrap content-wrap-storyboard">
+        <section class="item-content item-content-0 initial section section--large vw-100 h-100 d-flex justify-content-center lazy-bg" data-src="{{ 'assets/img/assets/storyboard/storyboard-11.jpg'|theme }}">
+          <h3 class="h3 col-lg-6 color-white my-small">Ipsum dolor sit amet, consetetur sadipscing sed diam nonumy eirmod elitr</h3>
+        </section>
+      </div>
+    </div>
+  </div>
+  <div class="section_full_h bg-dark-2 section-dark" id="">
+    <div class="pin-up pin-up-storyboard">
+      <div class="content-wrap content-wrap-storyboard">
+        <section class="item-content item-content-0 initial section section--large vw-100 h-100 d-flex justify-content-center lazy-bg" data-src="{{ 'assets/img/assets/storyboard/storyboard-1.jpg'|theme }}">
+          <h3 class="h3 col-lg-6 color-white my-small">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod</h3>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <section class="section_full_h section section-content text-center bg-dark-2 section-dark" data-arts-os-animation="true" data-arts-theme-text="light">
+    <div class="container h-100 d-flex align-items-center justify-content-center">
+      <div class="section-content__heading">
+        <h2 class="h1 text-center line-height-1">Lorem ipsum dolor sit <br>amet <span class="color-dark-3">consecutur</span></h2>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="section_full_h d-flex section-dark section section-projects section-projects-slider section-app bg-dark-2" data-arts-theme-text="light" id="app">
+    <div class="section-fullheight__inner section-fullheight__inner_mobile h-auto container align-items-center align-content-center align-self-center mt-5" style="min-height: 0;">
+      <div class="slider  slider-fullscreen-projects js-slider-fullscreen-projects js-slider-reveal js-slider text-center">
+        <!-- slider CONTENT -->
+        <div class="app-content-wrap slider-fullscreen-projects__content swiper-container js-slider-fullscreen-projects__content container mx-auto">
+          <div class="swiper-wrapper text-left">
+            
+
+            <div class="swiper-slide row align-items-center">
+              <div class="col-lg-4"></div>
+              <div class="col-lg-4 app-box align-items-center justify-content-center d-flex">
+                <img src="{{ 'assets/img/assets/app_slide_1.png'|theme }}">
+              </div>
+              <div class="col-lg-4">
+                <h3 class="h3 line-height-1">Registra il tuo lucchetto</h3>
+                <p class="font-weight-600">Gli scassinatori dovrebbero ringraziarci: con Hagane possono andare in pensione. Per operare il lucchetto hai bisogno di una sola cosa, e cioè il tuo telefono. Sappiamo che non te ne separi mai: problema risolto.</p>
+                <a href="{{ 'products'|page }}" class="button button button_bordered mt-3">PREORDER NOW -  SAVE 50%</a>
+                <div class="flex social-btns">
+                <a class="app-btn blu flex vert" href="#">
+                  <i class="fa fa-apple"></i>
+                  <span>Available on the <span class="big-txt d-block">App Store</span></span>
+                </a>
+                <a class="app-btn blu flex vert" href="#">
+                  <img src="{{ 'assets/img/assets/google-play.svg'|theme }}">
+                  <span>Get it on <span class="big-txt d-block">Google Play</span></span>
+                </a>
+              </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide row align-items-center">
+              <div class="col-lg-4 order-lg-3"></div>
+              <div class="fadeIn col-lg-4 order-lg-2 app-box align-items-center justify-content-center d-flex">
+                <img src="{{ 'assets/img/assets/app_slide_2.png'|theme }}">
+              </div>
+              <div class="col-lg-4 slideInUp order-lg-1">
+                <h3 class="h3 line-height-1">Lorem ipsum dolor sit amet</h3>
+                <p class="font-weight-600">Gli scassinatori dovrebbero ringraziarci: con Hagane possono andare in pensione. Per operare il lucchetto hai bisogno di una sola cosa, e cioè il tuo telefono. Sappiamo che non te ne separi mai: problema risolto.</p>
+                <a href="{{ 'products'|page }}" class="button button button_bordered mt-3">PREORDER NOW -  SAVE 50%</a>
+                <div class="flex social-btns">
+                <a class="app-btn blu flex vert" href="#">
+                  <i class="fa fa-apple"></i>
+                  <span>Available on the <span class="big-txt d-block">App Store</span></span>
+                </a>
+                <a class="app-btn blu flex vert" href="#">
+                  <img src="{{ 'assets/img/assets/google-play.svg'|theme }}">
+                  <span>Get it on <span class="big-txt d-block">Google Play</span></span>
+                </a>
+              </div>
+              </div>
+            </div>
+            <div class="swiper-slide row align-items-center align-content-center justify-content-center">
+              <div class="col-lg-4"></div>
+              <div class="fadeIn col-lg-4 app-box align-items-center justify-content-center d-flex">
+                <img src="{{ 'assets/img/assets/app_slide_3.png'|theme }}">
+              </div>
+              <div class="col-lg-4 slideInUp">
+                <h3 class="h3 line-height-1">Sita ipsum consetetur</h3>
+                <p class="font-weight-600">Gli scassinatori dovrebbero ringraziarci: con Hagane possono andare in pensione. Per operare il lucchetto hai bisogno di una sola cosa, e cioè il tuo telefono. Sappiamo che non te ne separi mai: problema risolto.</p>
+                <a href="{{ 'products'|page }}" class="button button button_bordered mt-3">PREORDER NOW -  SAVE 50%</a>
+
+                <div class="flex social-btns">
+                <a class="app-btn blu flex vert" href="#">
+                  <i class="fa fa-apple"></i>
+                  <span>Available on the <span class="big-txt d-block">App Store</span></span>
+                </a>
+                <a class="app-btn blu flex vert" href="#">
+                  <img src="{{ 'assets/img/assets/google-play.svg'|theme }}">
+                  <span>Get it on <span class="big-txt d-block">Google Play</span></span>
+                </a>
+              </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!-- - slider CONTENT -->
+        <!-- slider FOOTER -->
+        <div class="container-fluid slider-fullscreen-projects__footer mt-small">
+          <div class="row justify-content-center">
+            <div class="col-lg-12">
+              <!-- slider DOTS -->
+              <div class="slider__dots js-slider__dots">
+                <div class="slider__dot slider__dot_active">
+                  <svg class="svg-circle" xmlns="http://www.w3.org/2000/svg" width="265" height="4" viewBox="0 0 265 4">
+                    <rect id="Rectangle_39" data-name="Rectangle 39" width="265" height="4" rx="2" fill="#25282a"/>
+                  </svg>
+                </div>
+                <div class="slider__dot">
+                  <svg class="svg-circle" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <circle class="circle" cx="30" cy="30" r="29" fill="none"></circle>
+                  </svg>
+                </div>
+                <div class="slider__dot">
+                  <svg class="svg-circle" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <circle class="circle" cx="30" cy="30" r="29" fill="none"></circle>
+                  </svg>
+                </div>
+                <div class="slider__dot">
+                  <svg class="svg-circle" xmlns="http://www.w3.org/2000/svg" width="265" height="4" viewBox="0 0 265 4">
+                    <rect id="Rectangle_39" data-name="Rectangle 39" width="265" height="4" rx="2" fill="#25282a"/>
+                  </svg>
+                </div>
+              </div>
+              <!-- - slider DOTS -->
+            </div>
+          </div>
+        </div>
+        <!-- - slider FOOTER -->
+
+        <!-- slider IMAGES -->
+        <div class="slider-fullscreen-projects__images swiper-container js-slider-fullscreen-projects__images"  data-direction="horizontal" data-speed="800" data-autoplay-enabled="true" data-autoplay-delay="6000">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide row overflow"></div>
+            <div class="swiper-slide row overflow"></div>
+            <div class="swiper-slide row overflow"></div>
+          </div>
+        </div>
+        <!-- - slider IMAGES -->
+      </div>
+      <div class="text-center centered-link">
+        <p><a href="{{ 'specs'|page }}" class="underline d-inline-block">Scopri le caratteristiche tecniche</a></p>
+      </div>
+    </div>
+  </div>
+  <!-- - section PROJECTS SLIDER FULLSCREEN -->
+
+  <section class="section_full_h section section-content text-center" data-arts-os-animation="true">
+    <div class="container h-100 d-flex align-items-center justify-content-center">
+      <div class="section-content__heading">
+        <h2 class="h1 line-height-1">Se ha <span class="color-dark-3">due ruote</span>, 
+          <br>ha bisogno di <span class="color-dark-3">Hagane</span>.</h2>
+      </div>
+    </div>
+  </section>
+</div>
+
+  <!-- section IMAGES -->
+  <div class="section section-scroll section-slider-images" id="showcase">
+    <div class="slider slider-images slider-showcase js-slider-images my-medium">
+      <div class="swiper-container js-slider-images__slider container overflow-visible" data-drag-mouse="true" data-drag-cursor="true" data-drag-class="slider-images_touched" data-auto-height="true" data-slides-per-view="1.5" data-centered-slides="data-centered-slides" data-space-between="120" data-speed="800" data-autoplay-enabled="true" data-autoplay-delay="6000">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide overflow d-flex-centered text-center">
+            <div class="w-100 h-100" data-swiper-parallax="10%" data-swiper-parallax-zoom="10%">
+              <div class="slider__zoom-container w-100 h-100">
+                <img class="swiper-lazy" src="#" data-src="{{ 'assets/img/assets/gal1.jpg'|theme }}" width="1100" height="733" alt=""/>
+              </div>
+              <div class="bg-dark-2 p-4 col-lg-5 text-left ml-lg-5">
+                <h4 class="h2 color-dark-3 m-0">City Bike</h4>
+                <p class="color-white m-0">Tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p> 
+              </div>
+            </div>
+            
+          </div>
+          <div class="swiper-slide overflow d-flex-centered text-center">
+            <div class="w-100 h-100" data-swiper-parallax="10%" data-swiper-parallax-zoom="10%">
+              <div class="slider__zoom-container w-100 h-100">
+                <img class="swiper-lazy" src="#" data-src="{{ 'assets/img/assets/gal2.jpg'|theme }}" width="1100" height="733" alt=""/>
+              </div>
+              <div class="bg-dark-2 p-4 col-lg-5 text-left ml-lg-5">
+                <h4 class="h2 color-dark-3 m-0">Scooter</h4>
+                <p class="color-white m-0">Tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p> 
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide overflow d-flex-centered text-center">
+            <div class="w-100 h-100" data-swiper-parallax="10%" data-swiper-parallax-zoom="10%">
+              <div class="slider__zoom-container w-100 h-100"><img class="swiper-lazy" src="#" data-src="{{ 'assets/img/assets/gal3.jpg'|theme }}" width="1100" height="733" alt=""/>
+              </div>
+              <div class="bg-dark-2 p-4 col-lg-6 text-left ml-lg-5">
+                <h4 class="h2 color-dark-3 m-0">Monopattini</h4>
+                <p class="color-white m-0">Tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p> 
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide overflow d-flex-centered text-center">
+            <div class="w-100 h-100" data-swiper-parallax="10%" data-swiper-parallax-zoom="10%">
+              <div class="slider__zoom-container w-100 h-100"><img class="swiper-lazy" src="#" data-src="{{ 'assets/img/assets/gal4.jpg'|theme }}" width="1100" height="733" alt=""/>
+              </div>
+              <div class="bg-dark-2 p-4 col-lg-5 text-left ml-lg-5">
+                <h4 class="h2 color-dark-3 m-0">Motocicli</h4>
+                <p class="color-white m-0">Tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p> 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- slider FOOTER -->
+      <div class="slider-images__footer">
+        <div class="row no-gutters justify-content-center">
+          <div class="col-auto">
+            <!-- slider DOTS -->
+            <div class="slider__dots js-slider__dots">
+              <div class="slider__dot slider__dot_active">
+                <svg class="svg-circle" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <circle class="circle" cx="30" cy="30" r="29" fill="none"></circle>
+                </svg>
+              </div>
+              <div class="slider__dot">
+                <svg class="svg-circle" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <circle class="circle" cx="30" cy="30" r="29" fill="none"></circle>
+                </svg>
+              </div>
+              <div class="slider__dot">
+                <svg class="svg-circle" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <circle class="circle" cx="30" cy="30" r="29" fill="none"></circle>
+                </svg>
+              </div>
+              <div class="slider__dot">
+                <svg class="svg-circle" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <circle class="circle" cx="30" cy="30" r="29" fill="none"></circle>
+                </svg>
+              </div>
+            </div>
+            <!-- - slider DOTS -->
+          </div>
+        </div>
+      </div>
+      <!-- - slider FOOTER -->
+    </div>
+  </div>
+  <!-- - section IMAGES -->
+
+  <!-- - section MASTHEAD CONTAINER BOTTOM -->
+  <div class="section-dark section-scroll section_cta bg-dark-3" data-arts-theme-text="light">
+    <!-- section CONTENT #1 -->
+    <div class="section pt-medium pb-medium">
+      <div class="container">
+        <section class="section section-content clearfix" data-arts-os-animation="data-arts-os-animation">
+          <div class="section-content__inner">
+            <div class="row justify-content-center">
+              <div class="col-lg-12">
+                <div class="section-content__heading mb-1">
+                  <h2 class="h1 z-index-1 position-relative">Metti al sicuro le tue ruote</h2>
+                </div>
+              </div>
+              <div class="offset-lg-2 col-lg-4 overflow-visible p-0 lock-wrapper">
+                <div class="lazy floating-lock">
+                  <img class="of-contain bottom" src="#" data-src="{{ 'assets/img/assets/hagane-lock.png'|theme }}" width="546" height="764" alt=""/>
+                </div>
+                <div class="lazy floating-lock z-index-2 position-absolute">
+                  <img class="of-contain top" src="#" data-src="{{ 'assets/img/assets/hagane-lock-top.png'|theme }}" width="546" height="764" alt=""/>
+                </div>
+              </div>
+              <div class="col-lg-5 overflow-visible">
+                <a class="mt-4 button button_lg button_bordered button_white" data-hover="Acquista il tuo Hagane" href="{{ 'products'|page }}" target="_blank">
+                  <span class="button__label-hover">Acquista il tuo Hagane <small>PREORDER NOW SAVE 50%</small></span>
+                </a>
+              </div>
+              <div class="col-12 text-center color-white mt-3 centered-link">
+                <p><a href="{{ 'faq'|page }}" class="underline color-white">Vuoi saperne di più? Scopri le F.A.Q.</a></p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <!-- - section CONTENT #1 -->
+  </div>
+
+
+{% put scripts %}
+<!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js"></script>  
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/ScrollTrigger.js"></script>-->
+
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js"></script>
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollToPlugin3.min.js"></script>
+
+
+<script type="text/javascript">  
+
+
+  //gsap.registerPlugin(ScrollTrigger);
+
+  gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
+
+
+
+  $(function(){
+
+  var wrapper = $("#wrapper"),
+  $menu = $("#menu"),
+  $window = $(window);
+  $menu.on("click","a", function(){
+    $('.initial').addClass('is-active');
+    var $this = $(this),
+        href = $this.attr("href"),
+        topY = $(href).offset().top;
+        gsap.to($window, 2, {
+        scrollTo:{
+          y: topY, 
+          autoKill: true
+      }, 
+      //ease:Power3.easeOut 
+   });
+  return false;
+  });
+
+
+let sections = gsap.utils.toArray(".section_full_h"),
+    currentSection = sections[0];
+
+gsap.defaults({duration: 1});
+
+// stretch out the body height according to however many sections there are. 
+//gsap.set("#wrapper", {height: (sections.length * 100) + "%"});
+
+ScrollTrigger.create({
+  trigger: "#wrapper",
+  start: () => "top top",
+  end: () =>
+    "+=" + (window.innerHeight * sections.length - window.innerHeight),
+  scrub: 2,
+  pin: true,
+  //toggleClass: jQuery('body').toggleClass('currentSection[0]+i'),
+  invalidateOnRefresh: true,
+  // markers:true,
+  
+});
+
+// create a ScrollTrigger for each section
+sections.forEach((section, i) => {
+  ScrollTrigger.create({
+    // use dynamic scroll positions based on the window height (offset by half to make it feel natural)
+    start: () => (i - 0.5) * innerHeight,
+    end: () => (i + 0.5) * innerHeight,
+    scrub: true,
+    id: i+1,
+    //snapTo: 1 / (sections.length + 1),
+    //markers: true,
+    toggleActions: "play reset play reset",
+    //toggleClass: "inviewport", 
+    toggleClass: {targets: 'body', className: 'section_'+ i},
+    //toggleClass: jQuery('body').toggleClass('dark'),
+    //stagger:1,
+    // when a new section activates (from either direction), set the section accordingly.
+    onToggle: self => self.isActive && setSection(section)
+  });
+});
+
+
+
+
+
+
+/*
+
+var boxes = gsap.timeline({
+  scrollTrigger: {
+    trigger: '#wrapper',
+    pin:true,
+    start: "top top",
+    end: "+=3000",
+    pin:true,
+    scrub:0.3,
+  },
+  defaults:{duration:0.2}
+})
+.to('.section_full_h', {autoAlpha:1, stagger:1})
+
+.to({},{duration:1})
+
+*/
+
+  
+
+function setSection(newSection) {
+  if (newSection !== currentSection) {
+   gsap.timeline()
+     //.to(currentSection.querySelector(".h1, .h2, .h3, h1, h2, h3, #storyboard .content-wrap, .js-slider-reveal, .js-slider-images"), {y:-30, autoAlpha:0, duration:0.3})
+     .to(currentSection, {autoAlpha:0, duration:0.1})
+     .fromTo(currentSection.querySelector(".h1, .h2, .h3, h1, h2, h3, .js-slider-reveal, js-slider-images, .centered-link, .lock-box"), {y:0, autoAlpha:1}, {autoAlpha: 0, y: -50, duration:.3})
+     .to(currentSection.querySelector(".content-wrap-storyboard .item-content, .bike-box"), {autoAlpha: 0, duration:.1})
+     
+
+     
+    
+    gsap.timeline()
+      .to(newSection, {autoAlpha:1, duration:0.1})
+      .to(newSection.querySelector(".content-wrap-storyboard .item-content, .bike-box"), {autoAlpha: 1, duration:.1})
+      .fromTo(newSection.querySelector(".h1, .h2, .h3, h1, h2, h3, .js-slider-reveal, js-slider-images, .centered-link, .lock-box"), {y:50, autoAlpha:0}, {autoAlpha: 1, y: 0, duration:.3})
+    
+    currentSection = newSection;    
+  }
+}
+
+
+ 
+/*
+ gsap.utils.toArray("#menu a").forEach(function(a) {
+    a.addEventListener("click", function(e) {
+      e.preventDefault();
+      gsap.to(window, {duration: 2, scrollTo: e.target.getAttribute("href")});
+    });
+  });
+  
+  */
+
+
+
+var initialTopOffset = $('header').offset().top;
+$(window).scroll(function(event) {
+  var scroll = $(window).scrollTop();
+  // if the top of our browser is inside the section2
+  
+  if (scroll + initialTopOffset >= $('.section_cta').offset().top && scroll + initialTopOffset <= $('.section_cta').offset().top + $('.section_cta').outerHeight()) {
+    $('header').addClass('light'); 
+  } else {
+    $('header').removeClass('light'); 
+  }
+
+
+});
+
+
+
+
+//trigger the scroll
+$(window).scroll(); //ensure if you're in current position when page is refreshed
+
+
+
+
+/*
+const darkseck = gsap.utils.toArray('.bg-dark-2');
+darkseck.forEach((elem) => {
+  gsap.from(elem, {
+    scrollTrigger: {
+      start: 'top bottom',
+      end: 'bottom top',
+      trigger: elem,
+      toggleClass: jQuery('body').toggleClass('dark'),
+      color: jQuery('body').css('--ui-secondary-color'),
+    }
+  });
+});
+
+
+
+  scaleTimeline
+  .to('.item-content', {scale: 0.7, duration:3, ease:"none"}, 2);
+
+
+
+  function endImage (){
+    gsap.to('.content-wrap', {scale: 0.7, ease:"none"});
+  }
+  gsap.timeline({onComplete: endImage, repeat: 2, repeatDelay: 1, yoyo: true});
+
+
+  scaleTimeline
+  .to('.content-wrap', {scale: 0.7, ease:"none"}, 11);
+*/
+/*
+  gsap.to('.content-wrap', {scale: 0.7, ease:"none"});
+  function endImage (){
+    gsap.to(sections, {scale: 0.7, ease:"none"});
+  }
+
+
+
+  const sections = gsap.utils.toArray(".section--large");
+  let maxWidth = 0;
+
+  const getMaxWidth = () => {
+    maxWidth = 0;
+    sections.forEach((section) => {
+      maxWidth += section.offsetWidth;
+    });
+  };
+  getMaxWidth();
+  ScrollTrigger.addEventListener("refreshInit", getMaxWidth);
+
+  gsap.to(sections, {
+    x: () => `-${maxWidth - window.innerWidth}`,
+    ease: "SlowMo.ease",
+    onComplete:endImage,
+    onReverseComplete:backImage,
+    scrollTrigger: {
+      trigger: ".wrapper-h",
+      pin: true,
+      anticipatePin: 1,
+      //stagger: 0.1,
+      scrub: true,
+      end: () => `+=${maxWidth}`,
+      //invalidateOnRefresh: true,
+      refreshPriority: 1
+    }
+  });
+
+  sections.forEach((sct, i) => {
+    ScrollTrigger.create({
+      trigger: sct,
+      start: () => 'top top-=' + (sct.offsetLeft - window.innerWidth/2) * (maxWidth / (maxWidth - window.innerWidth)),
+      end: () => '+=' + sct.offsetWidth * (maxWidth / (maxWidth - window.innerWidth)),
+      toggleClass: {targets: sct, className: "is-active"}
+    });
+  });
+
+  */
+
+/*
+  .to(imessagewrapper, 0.4, {autoAlpha: 1, ease: Back.easeOut.config(1.7), 
+  onComplete: function () {
+   imessage_tl.play();
+   console.log("Trying to play");
+  }, onReverseComplete: function () {
+   imessage_tl.play();
+   console.log("Trying to play on reverse");
+  }},
+
+  
+  gsap.to(sections, {
+    scale: 0.5, 
+    ease: "none"
+  });
+
+  function endImage (){
+    gsap.to(sections, {scale: 0.7, ease:"none"});
+  }
+
+  function backImage (){
+    gsap.to(sections, {scale: 1, ease:"none"});
+  }
+*/
+
+  /*
+  gsap.to(".wrapper-h", {
+    scale: 0.5, 
+    ease: "none"
+  })
+  */
+  //gsap.to(".wrapper-h", {scale: 0.5, onComplete:sections}, );
+
+
+/*
+
+  gsap.set('.app-item-content:not(.initial)', { autoAlpha: 0 })
+  var appheadlines = gsap.utils.toArray(".app-text");
+  var apptotalDuration = 3000;
+  var appsingleDuration = apptotalDuration / appheadlines.length;
+  const applineTimeline = gsap.timeline();
+
+  const ST2 = ScrollTrigger.create({    
+    trigger: ".app-pin-up",
+    start: "center center",
+    end: "+=" + apptotalDuration,
+    //markers: true,
+    pin: true,
+    anticipatePin: 1,
+    scrub: true,
+    animation: applineTimeline,
+    refreshPriority: 1
+  });
+
+  applineTimeline
+  .to('.app-sideline', { duration: 1 }, 0)
+  .to('.app-sideline', { duration: 0.9, scaleX: 1, ease: "none" }, 0)
+
+  appheadlines.forEach((elem, i) => {    
+    const appsmallTimeline = gsap.timeline();
+    const content = document.querySelector('.app-content-wrap');
+    const apprelevantContent = document.querySelector('div.app-item-content-' + i);  
+    ScrollTrigger.create({    
+      trigger: ".app-wrapper",     
+      start: "top -=" + ( appsingleDuration * i ),
+      end: "+=" + appsingleDuration,
+      animation: appsmallTimeline,
+      toggleActions: apprelevantContent.classList.contains('remaining') ? "play none play reverse" : "play reverse play reverse",
+    });  
+    appsmallTimeline
+      .to(elem,{ duration: 0.25, color: "#F9423A"}, 0) 
+      .set(apprelevantContent, { duration: 0.9, autoAlpha: 1, ease: "Power4.easeOut" }, 0)
+    ;
+    gsap.to(apprelevantContent, {
+        scrollTrigger: {
+          trigger: apprelevantContent,
+          start: "top -=" + ( appsingleDuration * i ),
+          end: "+=" + appsingleDuration,
+          toggleClass:  "is-active",
+        }
+      })
+  });
+*/
+
+/* gsap.utils.toArray("#menu a").forEach(function(a) {
+    a.addEventListener("click", function(e) {
+      e.preventDefault();
+      gsap.to(window, {duration: 2, scrollTo: e.target.getAttribute("href")});
+    });
+  });
+  
+
+*/
+
+
+/*
+  gsap.to('.video-element', {
+    scale: 0.8,
+    ease: 'none', 
+    //defaults: {duration: 20},
+    scrollTrigger: {
+      trigger: '.video',
+      start: 'top center',
+      end: 'bottom bottom',
+      scrub: true,
+      //markers: true, 
+      pin: '.video'
+    }
+  });
+*/
+
+
+  // The relevant part to keeping the progress
+
+/*
+ScrollTrigger.addEventListener("refreshInit", () => progress = ST2.progress);
+ScrollTrigger.addEventListener("refresh", () => ST2.scroll(progress * ScrollTrigger.maxScroll(window)));
+*/
+//ScrollTrigger.addEventListener("refresh", calculatePositions);
+
+
+});
+
+
+</script>
+{% endput %}

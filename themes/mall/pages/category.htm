@@ -1,0 +1,42 @@
+url = "/category/:slug*"
+layout = "default"
+title = "Category"
+meta_title = "Hagane | Lucchetto keyless per bici e moto Made in Italy | Shop"
+meta_description = "Hagane è il lucchetto keyless per bici, monopattino, scooter e moto. Realizzato in acciaio temprato, si controlla senza chiavi tramite la app per smartphone"
+
+[products]
+category = ":slug"
+filterComponent = "productsFilter"
+setPageTitle = 1
+includeVariants = 1
+includeChildren = 1
+perPage = 9
+paginate = 1
+
+[productsFilter]
+category = ":slug"
+showPriceFilter = 0
+showBrandFilter = 1
+showOnSaleFilter = 0
+includeSliderAssets = 1
+
+[viewBag]
+localeMeta_title[en] = "Hagane | Made in Italy Keyless Lock for Bikes and Scooters | Shop"
+localeMeta_description[en] = "Hagane is the keyless lock for bicycles, scooters and motorcycles. Made of hardened steel, it’s controlled without keys via the smartphone app"
+==
+<!--<section class="section section-masthead pt-large pb-medium" data-arts-os-animation="data-arts-os-animation" data-background-color="var(--color-light-1)">
+	<div class="container">
+		<header class="section-masthead__header justify-content-center">
+			<div class="section-masthead__heading split-text js-split-text" data-split-text-type="lines,words" data-split-text-set="words">
+				<h1 class="h1 mt-0 mb-0 text-center"><span class="orange">Scegli il tuo</span> Hagane</h1>
+			</div>
+		</header>
+	</div>
+</section>-->
+
+<section class="section_h-100vh section products-container section-content" data-arts-os-animation="data-arts-os-animation" data-background-color="var(--color-light-1)">
+	<div class="mall-products h-100 p-0 m-0">
+		{% partial 'myentries' %}
+	</div>
+	{% partial products ~ '::scripts' %}
+</section>

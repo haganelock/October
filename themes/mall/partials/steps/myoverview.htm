@@ -1,0 +1,99 @@
+<form class="mall-quick-checkout" data-request data-request-validate>
+    {{ form_token() }}
+    {{ form_sessionKey() }}
+    <div class="mall-quick-checkout__content-column">
+        <div class="mall-quick-checkout__collapsible">
+            <div class="mall-quick-checkout__collapsible-element mall-quick-checkout__collapsible-element--open">
+                {% partial 'mycustomerinfo' %}
+            </div>
+        </div>
+    </div>
+    <aside class="mall-quick-checkout__cart-column">
+        <!--<div id="sidebar" data-arts-scroll-fixed>-->
+            <!--<h2 class="mall-quick-checkout__heading">
+                {{ 'your_cart'|_ }}
+            </h2>-->
+
+            <div class="mall-quick-checkout__cart">
+                {% partial quickCheckout ~ '::cart' %}
+            </div>
+
+            <div class="mall-quick-checkout__collapsible-element mall-quick-checkout__payment-methods">
+                {% partial quickCheckout ~ '::paymentmethod' %}
+            </div>
+
+            {% if quickCheckout.cart.products.count > 0 %}
+                <div class="mall-signup-terms">
+                    <label class="mall-checkbox">
+                        <input class="js-mall-toggle-signup-terms"
+                               type="checkbox"
+                               name="terms_accepted"
+                               value="1"
+                        >
+                        <span>
+                        {{ 'I_agree_to'|_ }} <a href="{{ 'conditions'|page }}" target="_blank">{{ 'terms_and_conditions'|_ }}</a>
+                        <div data-validate-for="terms_accepted"></div>
+                    </span>
+                    </label>
+                </div>
+
+                <div class="mall-quick-checkout__actions">
+                    <button class="js-mall-checkout mall-btn-checkout mall-btn mall-btn--secondary">
+                        {{ 'offline.mall::frontend.checkout.checkout' | trans }}
+                    </button>
+                </div>
+            {% endif %}
+        <!--</div>-->
+    </aside>
+</form>
+
+
+{% put scripts %}
+<!--<script src="{{ 'assets/js/sticksy/sticksy.min.js'|theme }}"></script>
+<script>
+    var stickyEl = $('.widget.js-sticky-widget').sticksy({topSpacing: 60})[0]
+    stickyEl.onStateChanged = function (state) {
+        if(state === 'fixed') stickyEl.nodeRef.classList.add('widget--sticky')
+        else stickyEl.nodeRef.classList.remove('widget--sticky')
+    }
+</script>
+
+
+<script type="text/javascript">
+
+// create an Observer instance
+const resizeObserver = new ResizeObserver(entries => 
+  console.log('Body height changed:', entries[0].target.clientHeight)
+)
+
+$(function () {
+    var top = $('#sidebar').offset().top - parseFloat($('#sidebar').css('marginTop').replace(/auto/, 0));
+    var footTop = $('.footer').offset().top - parseFloat($('.footer').css('marginTop').replace(/auto/, 0));
+
+    var maxY = footTop - $('#sidebar').outerHeight();
+
+    $(window).scroll(function(evt) {
+        var y = $(this).scrollTop();
+        if (y > top) {
+            
+//Quand scroll, ajoute une classe ".fixed" et supprime le Css existant 
+            if (y < maxY) {
+                $('#sidebar').addClass('sidebar-fixed').removeAttr('style');
+            } else {
+                
+//Quand la sidebar arrive au footer, supprime la classe "fixed" précèdement ajouté
+                $('#sidebar').addClass('sidebar-absolute');
+                $('#sidebar').removeClass('sidebar-fixed').css({
+                    position: 'absolute',
+                    top: (maxY - top) + 'px'
+                });
+            }
+        } else {
+            $('#sidebar').removeClass('sidebar-fixed');
+        }
+    });
+});
+</script>-->
+
+{% endput %}
+

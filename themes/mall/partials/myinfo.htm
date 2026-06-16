@@ -1,0 +1,46 @@
+<div class="col-sm-5 px-lg-5">
+	
+
+	<img src="{{ item.image.path }}">
+
+	{# % partial __SELF__ ~ '::propertyvalues' images=item.all_images % #}
+	{# % partial __SELF__ ~ '::images' images=item.all_images % #}
+</div>
+<div class="col-sm-7">
+	<h1 class="h2 mall-product__name line-height-1 mb-5">{{ 'Complimenti, stai per ordinare il tuo'|_ }} <span class="h1 color-dark-3 d-block line-height-1">{{ item.name }}</span></h1>
+	{% if item.description_short %}
+	    <h3 class="mall-product__description-short">{{ item.description_short | nl2br }}</h3>
+	{% endif %}
+
+	<div class="mall-product__description">
+	    {{ item.description | raw }}
+	</div>
+
+	{% if __SELF__.showReviews %}
+	    {% component 'productReviews' %}
+	{% endif %}
+
+	{% partial 'mycart' %}
+
+	<div class="share-buttons h5 mt-4">
+		<span>{{ 'Condividi questo prodotto'|_ }}</span>
+		<a class="ml-3" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fstaging.syncronika.it%2Fhagane%2Fproduct%2Flucchetto-1&amp;t=Product" title="Share on Facebook" target="_blank">
+			<i class="fa fa-facebook"></i>
+		</a>
+		<a class="ml-3" href="https://twitter.com/intent/tweet?source=https%3A%2F%2Fstaging.syncronika.it%2Fhagane%2Fproduct%2Flucchetto-1&amp;text=Product:%20https%3A%2F%2Fstaging.syncronika.it%2Fhagane%2Fproduct%2Flucchetto-1" target="_blank" title="Tweet">
+			<i class="fa fa-twitter"></i>
+		</a>
+		<a class="ml-3" href="http://pinterest.com/pin/create/button/?url=https%3A%2F%2Fstaging.syncronika.it%2Fhagane%2Fproduct%2Flucchetto-1&amp;description=Product" target="_blank" title="Pin it">
+			<i class="fa fa-pinterest"></i>
+		</a>
+		<a class="ml-3" href="http://www.linkedin.com/sharePost?mini=true&amp;url=https%3A%2F%2Fstaging.syncronika.it%2Fhagane%2Fproduct%2Flucchetto-1&amp;title=Product&amp;summary=Product&amp;source=https%3A%2F%2Fstaging.syncronika.it%2Fhagane%2Fproduct%2Flucchetto-1" target="_blank" title="Share on LinkedIn">
+			<i class="fa fa-linkedin"></i>
+		</a>
+		<a class="ml-3" href="mailto:?subject=Product&amp;body=Product:%20https%3A%2F%2Fstaging.syncronika.it%2Fhagane%2Fproduct%2Flucchetto-1" target="_blank" title="Email">
+			<i class="fa fa-envelope-o"></i>
+		</a>
+	
+	</div>
+</div>
+
+

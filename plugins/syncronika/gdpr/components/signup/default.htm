@@ -1,0 +1,22 @@
+<div id="mailsignup-container">
+    <span>Iscriviti alla newsletter</span>
+    <form
+        data-request="{{ newsletterSignup }}::onSignup"
+        data-request-update="'{{ newsletterSignup }}::result': '#mailsignup-container'">
+        <div>
+            <div>
+                <input name="email" type="text" id="email" placeholder="Inserisci la tua mail"/>
+                <div>
+                    <button type="submit" id="button-addon2">
+                        <i class="fa fa-chevron-right color-dark-3"></i>
+                    </button>
+                </div>
+            </div>
+            <div>
+                <label for="gdprChoice">Accetta la nostra <a href="{{ __SELF__.property('privacyPolicyPage')|page }}">privacy policy</a></label>
+                <input name="gdpr" type="checkbox" id="gdprChoice" class="form-control" />
+            </div>
+            <span class="help-block">Non invieremo mai spam o forniremo questo indirizzo ad altri.</span>
+        </div>
+    </form>
+</div>

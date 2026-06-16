@@ -1,0 +1,71 @@
+<div class="mall-products-item col-md-6 col-lg-6 p-0 d-flex align-items-center justify-content-center align-content-center h-100">
+    <a class="d-block px-0 pt-medium pb-large h-100"
+       href="{{ productPage|page({slug: item.slug, variant: item.variantHashId}) }}"
+       data-mall-item-id="{{ item.prefixedId }}">
+        <div class="row align-items-center justify-content-center h-100">
+            <div class="mall-products-item__image_ col-lg-3 mr-lg-3 pl-lg-0">
+                <img src="{{ item.image.path }}">
+            </div>
+            <div class="mall-products-item__info col-lg-auto">
+                <div class="mall-products-item__info-primary d-block">
+                    <div class="mall-products-item__name">
+                        <h2 class="h2 m-0">{{ item.name }}</h2>
+                    </div>
+                    <div class="mall-products-item__short-description_ ">
+                        <p class="h5 mt-0">{{ item.description_short | nl2br }}</p>
+                        <!--<p class="">{{ item.description | raw }}</p>-->
+                    </div>
+                </div>
+                {% set price = item.price() %}
+
+                {% if item.oldPrice().integer %}
+                <div class="card-status-label text-uppercase mt-4 mb-3">
+                    <small class="font-weight-600">Preorder now <span class="label color-white bg-dark-3 px-2">be the first</span></small>
+                </div>
+                {% endif %}
+
+                <div class="mall-products-item__info-secondary h2 text-right line-height-1">
+                    {% if item.oldPrice().integer %}
+                    <div class="mall-products-item__old-price p-0 mr-4">
+                        <span class="line-through">{{ item.oldPrice.count > 0 ? item.oldPrice().string | raw }}</span>
+                    </div>
+                    {% endif %}
+                    <div class="mall-products-item__price {{ price.isCustomerSpecific ? 'mall-products-item__price--special' }}">
+                        {{ price.string | raw }}
+                    </div>
+                </div>
+                <span class="button button_bordered mt-5">{{ 'Scopri di più'|_ }}</span>
+
+                <form id="mall-add-to-cart-{{ item.prefixedId }}" class="d-inline-block">
+                    <input type="hidden" id="product" name="product" value="{{ item.getHashIdAttribute }}">
+                    <div class="mall-product__add-to-cart">
+                        {% partial 'myaddtocart' item=item %}
+                    </div>
+                </form>
+                <div class="mall-products-item__info-teritary">
+                    {% set rating = item.reviews_rating %}
+                    {# To display the product's rating use: #}
+                    {# set rating = item.product.reviews_rating #}
+
+                    {% if rating > 0 %}
+                    <div class="mall-products-item__stars">
+                        {% partial __SELF__ ~ '::stars' rating=rating %}
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </a>
+</div>
+
+{% put scripts %}
+<script>
+    $("#mall-add-to-cart-{{ item.prefixedId }}").on("submit", function (event) {
+        event.stopImmediatePropagation();
+        event.preventDefault();
+        $("#mall-add-to-cart-{{ item.prefixedId }}").request('onAddToCart', {
+            redirect: '/checkout'
+        });
+    });
+</script>
+{% endput %}

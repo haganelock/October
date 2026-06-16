@@ -1,0 +1,19 @@
+title = "Products"
+layout = "default"
+url = "/products/:category?"
+
+[shopProductsList]
+categoryFilter = 0
+scope = "showItems"
+limitType = "paginate"
+take = 20
+orderBy = "name"
+sort = "asc"
+productPage = "product"
+categoryPage = "products"
+showQuickAdd = 1
+typeCategoriesFilter = "dropdown"
+==
+<div class="container">
+    {% component 'shopProductsList' %}
+</div>
