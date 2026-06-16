@@ -1,0 +1,52 @@
+description = "Shop (lightweight layout, no arts preloader/JS)"
+==
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <title>{{ this.page.title }} – Hagane</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="{{ 'assets/css/vendor.css'|theme }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ 'assets/css/main.css'|theme }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ 'assets/css/style.css'|theme }}"/>
+    {% styles %}
+    <style>
+        body { padding-top: 0; opacity: 1 !important; }
+        .shop-header { border-bottom: 1px solid #eee; background: #fff; }
+        .shop-header .logo img { height: 26px; }
+        .shop-header nav a { color: #1d1d1d; text-decoration: none; margin-left: 1.6rem; font-weight: 600; }
+        .shop-header nav a:hover { color: #C43730; }
+        .shop-footer { background: #1d1d1d; color: #fff; padding: 30px 0; margin-top: 60px; }
+        .shop-footer a { color: #fff; }
+    </style>
+</head>
+<body>
+    <header class="shop-header py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="logo" href="{{ 'home'|page }}"><img src="{{ 'assets/img/assets/logo.svg'|theme }}" alt="Hagane"/></a>
+            <nav class="d-flex align-items-center">
+                <a href="{{ 'home'|page }}">Overview</a>
+                <a href="{{ 'specs'|page }}">Specs</a>
+                <a href="{{ 'faq'|page }}">F.A.Q.</a>
+                <a href="{{ 'products'|page }}">Products</a>
+                <a href="{{ 'cart'|page }}">🛒</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container py-5">
+        {% page %}
+    </main>
+
+    <footer class="shop-footer">
+        <div class="container">
+            <strong>HAGANE</strong> — Keyless Bike Lock &nbsp;·&nbsp; For any request: <a href="mailto:info@hagane.it">info@hagane.it</a>
+        </div>
+    </footer>
+
+    <script src="{{ 'assets/js/jquery-3.5.1.min.js'|theme }}"></script>
+    {% framework extras %}
+    {% scripts %}
+</body>
+</html>
