@@ -2,12 +2,11 @@ title = "Product"
 layout = "default"
 url = "/product/:slug"
 
-[shopProductsDetails]
-slug = "{{ :slug }}"
+[product]
+product = "{{ :slug }}"
 ==
-
-<section class="section section-product-details py-medium">
-	<div class="container">
-		{% component 'shopProductsDetails' %}
-	</div>
+<section class="section py-medium">
+    <div class="container">
+        {% component 'product' %}
+    </div>
 </section>

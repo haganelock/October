@@ -1,0 +1,3 @@
+<a href="{{ __SELF__.cartUrl }}" class="cart-button" style="display:inline-flex;align-items:center;gap:6px;text-decoration:none;">
+   <span>🛒</span>{% if __SELF__.count > 0 %}<span style="background:{{ __SELF__.property('colorBG') }};color:{{ __SELF__.property('color') }};border-radius:999px;padding:1px 7px;font-size:12px;font-weight:700;">{{ __SELF__.count }}</span>{% endif %}
+</a>
