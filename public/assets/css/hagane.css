@@ -82,7 +82,7 @@ body.overlay-menu-opened .hgx-mobile { display: block; }
 .hero-cta { display: flex; flex-wrap: wrap; gap: 14px; }
 .store-badge { display: inline-flex; transition: transform .15s ease; }
 .store-badge:hover { transform: translateY(-2px); }
-.store-badge img { height: 52px; width: auto; display: block; }
+.store-badge img { height: 40px; width: auto; display: block; }
 .hero-visual { display: flex; align-items: flex-end; justify-content: center; gap: clamp(12px, 2.5vw, 32px); }
 .hero-lock { height: 396px; width: auto; }
 /* reusable phone mockup */
