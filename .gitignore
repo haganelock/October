@@ -2,3 +2,7 @@ OCTOBER_SHIT/auth.json
 .DS_Store
 OCTOBER_SHIT/vendor/
 OCTOBER_SHIT/node_modules/
+
+# Firebase
+.firebase/
+firebase-debug.log

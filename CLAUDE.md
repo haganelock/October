@@ -40,8 +40,7 @@ Sito **statico** puro: HTML + CSS + JS, nessun backend.
 - `site.js` = script custom: i18n IT/EN, menu mobile, animazioni "reveal" allo scroll, fallback vari.
 - **Bilingue IT/EN:** l'italiano è il testo di default nel DOM; l'inglese arriva dal dizionario dentro `site.js` (attributi `data-i18n` / `data-i18n-html`, switch lingua `IT/EN` in alto).
 
-**Peso morto da NON usare (e candidato all'eliminazione):** sono residui dell'estrazione dal vecchio tema October e **non sono referenziati da nessuna pagina**:
-`assets/js/vendor.js` (~1,3 MB), `assets/js/components.js`, `assets/js/jquery-3.5.1.min.js`, `assets/js/ScrollTrigger.min.js`, `assets/js/ScrollToPlugin.min.js`, `assets/css/main.css`, `assets/css/vendor.css`, `assets/css/style.css`, e i partial `public/header.htm` / `public/footer.htm`.
+**Pulizia già fatta:** gli asset residui del vecchio tema October (`vendor.js` ~1,3 MB, `components.js`, jQuery, `ScrollTrigger`, `ScrollToPlugin`, `main.css`, `vendor.css`, `style.css`, e i partial `header.htm`/`footer.htm`) **sono stati rimossi** perché non usati da nessuna pagina. Restano solo `assets/js/site.js` e `assets/css/hagane.css`.
 
 ## Pagamenti (Stripe)
 
@@ -58,13 +57,17 @@ Per cambiare prezzi/prodotti: aggiornare il link Stripe e il prezzo mostrato in 
 
 HGN S.r.l. — Corso Lodi 18, 20135 Milano (MI), Italia — P.IVA / C.F. 11577150961 — PEC `hgn@pec.it` — email `info@hagane.it`.
 
-## Deploy su Firebase Hosting — DA CONFIGURARE
+## Deploy su Firebase Hosting
 
-Non ancora impostato. Per pubblicare servono:
-1. `firebase.json` con `"hosting": { "public": "public", "ignore": [...] }` e `.firebaserc` con il project id Firebase.
-2. `firebase deploy --only hosting`.
+**Configurato.** Project Firebase: **`hagane-e15f3`** (in `.firebaserc`). La *public directory* è `public/` (in `firebase.json`).
 
-(Chiedere a Claude di preparare questi file quando si è pronti per la messa online.)
+Per pubblicare, dal proprio computer (serve la Firebase CLI installata e `firebase login` fatto una volta), dalla radice del repo:
+
+```bash
+firebase deploy --only hosting
+```
+
+Anteprima locale prima di pubblicare: `firebase emulators:start --only hosting` (oppure un qualsiasi server statico nella cartella `public/`).
 
 ## Note operative per Claude
 
