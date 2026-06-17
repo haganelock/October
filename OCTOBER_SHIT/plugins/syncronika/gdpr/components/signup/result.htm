@@ -1,0 +1,13 @@
+{% if error %}
+<!--<div class="alert alert-danger">-->
+    <p data-control="flash-message" data-interval="5" class="error">
+    {{ error }}
+    </p>
+<!--</div>-->
+{% else %}
+<!--<div class="alert alert-success">-->
+    <p data-control="flash-message" data-interval="5" class="success">
+        Grande successo! Ora possiamo tenerci in contatto, a presto!
+    </p>
+<!--</div>-->
+{% endif %}

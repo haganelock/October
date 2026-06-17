@@ -1,0 +1,19 @@
+url = "/conditions"
+layout = "default"
+title = "Termini e condizioni"
+meta_title = "Hagane | Lucchetto keyless per bici e moto Made in Italy | Termini"
+meta_description = "Hagane è il lucchetto keyless per bici, monopattino, scooter e moto. Realizzato in acciaio temprato, si controlla senza chiavi tramite la app per smartphone"
+
+[viewBag]
+localeMeta_title[en] = "Hagane | Made in Italy Keyless Lock for Bikes and Scooters | Terms"
+localeMeta_description[en] = "Hagane is the keyless lock for bicycles, scooters and motorcycles. Made of hardened steel, it’s controlled without keys via the smartphone app"
+==
+<section class="section section-masthead pt-large pb-medium" data-arts-os-animation="data-arts-os-animation" data-background-color="var(--color-light-1)">
+	<div class="container">
+        {% if (activeLocale == 'it') %}
+            {% partial 'conditions/conditions_it' %}
+        {% else %}
+            {% partial 'conditions/conditions_en' %}
+        {% endif %}
+	</div>
+</section>

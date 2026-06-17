@@ -1,0 +1,100 @@
+url = "/products/:category?"
+layout = "default"
+title = "Products"
+
+[shopProductsList]
+categoryFilter = 0
+scope = "showItems"
+limitType = "paginate"
+take = 20
+orderBy = "name"
+sort = "asc"
+productPage = "product"
+categoryPage = "products"
+showQuickAdd = 1
+typeCategoriesFilter = "dropdown"
+==
+<section class="section section-masthead pt-medium pb-small" data-arts-os-animation="data-arts-os-animation" data-background-color="var(--color-light-1)">
+	<div class="container">
+		<header class="section-masthead__header justify-content-center">
+			<div class="section-masthead__heading split-text js-split-text" data-split-text-type="lines,words" data-split-text-set="words">
+				<h1 class="h1 mt-0 mb-0 text-center"><span class="orange">Scegli il tuo</span> Hagane</h1>
+			</div>
+		</header>
+	</div>
+</section>
+{% if categoryList %}
+<section class="products-navigation pb-small">
+	<div class="container">
+		{% if showCategoriesFilter %}
+
+		{% if typeCategoriesFilter == 'dropdown' %}
+		<div class="dropdown">
+			<button id="btnGroupCategories" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<i class="fas fa-filter"></i> {{ 'pixel.shop::component.cart.filter_by_category'|trans }}
+			</button>
+			<ul class="dropdown-menu" aria-labelledby="btnGroupCategories">
+				{% for category in categoryList if category.nest_depth == 0 %}
+					<li class="{% if activeCategory.slug == category.slug %}active{% endif %}">
+						<a href="{{ category.url }}" class="dropdown-item">{{ category.name }}</a>
+
+						{% if category.children|length > 0 %}
+						<ul class="sub-category">
+							{% for item in categoryList if item.parent.id == category.id %}
+							<li class="{% if activeCategory.slug == item.slug %}active{% endif %}">
+								<a href="{{ item.url }}">{{ item.name }}</a>
+							</li>
+							{% endfor %}
+						</ul>
+						{% endif %}
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+		{% else %}
+		<div class="btn-group" role="group">
+			{% for category in categoryList %}
+				<a href="{{ category.url }}" class="btn btn-default {% if activeCategory.slug == category.slug %}active{% endif %}">{{ category.name }}</a>
+			{% endfor %}
+		</div>
+		{% endif %}
+
+		{% endif %}
+
+		{% if showSearchBar %}
+		<form method="get" class="products-search">
+			<div class="input-group">
+				<input name="search" type="text" class="form-control" placeholder="Search ..." aria-label="Search" value="{{ input('search') }}">
+				<div class="input-group-append input-group-btn">
+					<button class="btn btn-default" type="submit"><i class="fas fa-search"></i></button>
+				</div>
+			</div>
+		</form>
+		{% endif %}
+	</div>
+</section>
+{% endif %}
+
+<section class="section products-container">
+	<div class="container pb-small">
+		<div class="row">
+		{% for productGroup in shopProductsList.products.chunk(4) %}
+			{% for product in productGroup %}
+				{% partial 'my-product' product=product %}
+			{% endfor %}
+		{% else %}
+		</div>
+		<div class="text-center">
+			<i class="fas fa-search fa-6x"></i>
+			<h1>{{ 'pixel.shop::component.cart.no_results'|trans }}</h1>
+		</div>
+
+		{% endfor %}
+	</div>
+</section>
+
+<section class="products-pagination">
+	<div class="container">
+		{{ products.render|raw }}
+	</div>
+</section>

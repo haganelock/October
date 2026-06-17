@@ -1,0 +1,31 @@
+url = "/checkout/:step?"
+layout = "default"
+title = "Checkout"
+is_hidden = 0
+
+[viewBag]
+localeUrl[en] = "/checkout/:step?"
+
+[signUp]
+
+[quickCheckout]
+loginPage = "login"
+step = "{{ :step }}"
+==
+<section class="section section-masthead pt-large pb-medium" data-arts-os-animation="data-arts-os-animation" data-background-color="var(--color-light-1)">
+	<div class="container">
+		<header class="section-masthead__header justify-content-center">
+			<div class="section-masthead__heading split-text" data-split-text-type="lines,words" data-split-text-set="words">
+				<h1 class="h1 mt-0 mb-0 text-center line-height-1"><span class="orange">{{ 'Checkout'|_ }}:</span>  {{ 'dicci chi stiamo facendo felice'|_ }}</h1>
+			</div>
+		</header>
+	</div>
+</section>
+
+<section class="section section-checkout section-content" data-arts-os-animation="data-arts-os-animation">
+	<div class="container pb-large">
+        {% partial ('steps/my' ~ quickCheckout.step) %}
+		{% partial quickCheckout ~ '::overlay' %}
+		{% partial quickCheckout ~ '::scripts' %}
+	</div>
+</section>

@@ -1,0 +1,14 @@
+1.0.1:
+    - 'First version of mall'
+    - add_dollar_prices_mall_products.php
+    - add_fiscal_code_mall_orders.php
+    - add_fiscal_code_mall_customers.php
+1.0.2:
+    - 'Added field phone_number to offline_mall_customers'
+    - add_phone_number_mall_customers.php
+1.0.3:
+    - 'Added field "details", "specs" and "cover" to table offline_mall_products'
+    - add_details_specs_cover_to_offline_mall_products.php
+1.0.4:
+    - 'Added fields fiscal_code, company_name and phone_number to users'
+    - add_fiscal_code_company_phone_number_to_users.php

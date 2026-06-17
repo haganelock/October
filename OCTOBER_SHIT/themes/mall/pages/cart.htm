@@ -1,0 +1,29 @@
+url = "/cart"
+layout = "default"
+title = "Cart"
+
+[cart]
+showDiscountApplier = 1
+discountCodeLimit = 0
+showTaxes = 1
+showShipping = 1
+showProceedToCheckoutButton = 0
+==
+
+<section class="section section-masthead pt-large pb-medium" data-arts-os-animation="data-arts-os-animation" data-background-color="var(--color-light-1)">
+	<div class="container">
+		<header class="section-masthead__header justify-content-center">
+			<div class="section-masthead__heading split-text" data-split-text-type="lines,words" data-split-text-set="words">
+				<h1 class="h1 mt-0 mb-0 text-center line-height-1"><span class="orange">{{ 'Le tue due ruote'|_ }}</span> <br>{{ 'sono (quasi) al sicuro'|_ }}</h1>
+			</div>
+		</header>
+	</div>
+</section>
+
+<section class="section pb-large section-content" data-arts-os-animation="data-arts-os-animation">
+	<div class="container mallcart-checkout">
+		<div class="col-lg-10 mx-auto">
+			{% component 'mallcart' %}
+		</div>
+	</div>
+</section>

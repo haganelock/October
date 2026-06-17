@@ -1,0 +1,13 @@
+title = "Address"
+layout = "default"
+url = "/address/:address?/:redirect?/:set?"
+[session]
+security = "user"
+redirect = "home"
+
+[addressForm]
+address = "{{ :address }}"
+redirect = "{{ :redirect }}"
+set = "{{ :set }}"
+==
+{% component 'addressForm' %}

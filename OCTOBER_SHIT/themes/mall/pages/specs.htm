@@ -1,0 +1,342 @@
+url = "/specs"
+layout = "default"
+title = "Specs"
+meta_title = "Hagane | Lucchetto per bici keyless e azionato via bluetooth"
+meta_description = "Le specifiche di Hagane – Lucchetto keyless per bici e moto in acciaio temprato. Robusto, smart e handsfree: si aziona via bluetooth tramite la sua app"
+
+[viewBag]
+localeMeta_title[en] = "Hagane | Bluetooth operated keyless bike and scooter lock"
+localeMeta_description[en] = "The specifications of Hagane - Keyless lock for bikes and motorcycles in hardened steel. Robust, smart and handsfree: it can be operated via bluetooth through its app"
+==
+<section class="section section-masthead pt-large pb-medium text-center" data-arts-os-animation="data-arts-os-animation"
+         data-background-color="var(--color-light-1)">
+    <div class="section-masthead__inner container-fluid">
+        <header class="row section-masthead__header justify-content-center">
+            <div class="col">
+                <div class="section-masthead__heading split-text js-split-text" data-split-text-type="lines,words"
+                     data-split-text-set="words">
+                    <h1 class="h1 mt-0 mb-0">{{ '<span class="orange">Fuori e dentro</span> Hagane'|_ }}</h1>
+                </div>
+            </div>
+        </header>
+    </div>
+</section>
+
+<section class="section sec-type section-content text-center clearfix" data-arts-os-animation="data-arts-os-animation">
+    <div class="container">
+        <!--<h4 class="h5">Seleziona un modello</h4>-->
+        <div id="tab_nav" class="tab_nav">
+            <ul class="menu__tabs position-absolute p-0 mt-medium">
+                <li class="h2 ml-0"><a href="javascript:void(0);" class="active">Hagane 3414</a></li>
+                <li class="h2"><a href="javascript:void(0);">Hagane 4218</a></li>
+            </ul>
+
+            <div id="item-1" class="menu__item active row align-items-center">
+                <div class="col-lg-3 text-left">
+                    <h3>Hagane 3414</h3>
+                    <p>{{ 'Il lucchetto ideale per bici, monopattini e scooter. Robusto, keyless e handsfree.'|_ }}</p>
+                </div>
+                    <div class="offset-lg-1 col-lg-8">
+                    {% if activeLocale == "en" %}
+                         <img class="" src="{{ 'assets/img/assets/model-1.svg'|theme }}">
+                    {% else %}
+                        <img class="" src="{{ 'assets/img/assets/modello-1.svg'|theme }}">
+                    {% endif %}
+                </div>
+            </div>
+            <div id="item-2" class="menu__item row align-items-center" style="display: none;">
+                <div class="col-lg-3 text-left">
+                    <h3>Hagane 4218</h3>
+                    <p>{{ 'Il lucchetto ideale per scooter e moto. Robusto, keyless e handsfree.'|_ }}</p>
+                </div>
+                <div class="offset-lg-1 col-lg-8">
+                    {% if activeLocale == "en" %}
+                         <img class="" src="{{ 'assets/img/assets/model-2.svg'|theme }}">
+                    {% else %}
+                        <img class="" src="{{ 'assets/img/assets/modello-2.svg'|theme }}">
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- section CONTENT #2 -->
+<div class="sec-caratteristiche container section pt-4 pb-medium">
+    <div class="row justify-content-start mt-small pt-small sep-row">
+        <div class="col-lg-4">
+            <section class="section section-content clearfix text-right"
+                     data-arts-os-animation="data-arts-os-animation">
+                <div class="section-content__inner">
+                    <div class="w-100"></div>
+                    <div class="section-content__heading split-text js-split-text mb-0-5"
+                         data-split-text-type="lines,words" data-split-text-set="words">
+                        <h4 class="h2">{{ 'Caratteristiche Tecniche'|_ }}</h4>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="col-lg-7 offset-lg-1">
+            <section class="section section-content clearfix" data-arts-os-animation="data-arts-os-animation">
+                <div class="section-content__inner">
+                    <div class="w-100"></div>
+                    <div class="section-content__text split-text js-split-text" data-split-text-type="lines"
+                         data-split-text-set="lines">
+                        <div class="accordion" id="accordionExample">
+                            <div class="card">
+                                <div class="card-header" id="headingOne">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link h4 btn-block text-left" type="button"
+                                                data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"aria-controls="collapseOne">{{ 'Dimensioni e peso'|_ }} <i class="fa fa-chevron-down"></i>
+                                        </button>
+                                    </h5>
+                                </div>
+
+                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                     data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <p><strong>Hagane 3414</strong>: {{ 'l’ingombro chiuso è di 188,5 x 142 x 34 mm. Pesa 1,5kg.'|_ }}</p>
+                                        <p><strong>Hagane 4218</strong>: {{ 'l’ingombro chiuso è di 224 x 142 x 42 mm. Pesa 1,8kg.'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingTwo">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link h4 btn-block text-left collapsed" type="button"
+                                                data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                                                aria-controls="collapseTwo">
+                                            {{ 'Costruzione'|_ }} <i class="fa fa-chevron-down"></i>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                     data-parent="#accordionExample">
+                                    <div class="card-body">
+          
+                                        <p>{{ 'L’arco e il tubo di Hagane sono costruiti in acciaio temprato. Gli spessori sono studiati per opporre la massima resistenza a taglio e perforazione.'|_ }}</p>
+
+                                        <p>{{ 'La finitura tramite cataforesi garantisce alle parti metalliche una protezione ottimale alle intemperie.'|_ }}</p>
+
+                                        <p>{{ 'L’arco è rivestito in gomma: protegge il lucchetto dagli urti, e il tuo mezzo da graffi e strisci.'|_ }}</p>
+
+                                        <p>{{ 'Il pulsante per l’apertura di prossimità è montato sul fianco del tubo che racchiude il cuore elettronico di Hagane.'|_ }}</p>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingThree">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link h4 btn-block text-left collapsed" type="button"
+                                                data-toggle="collapse" data-target="#collapseThree"
+                                                aria-expanded="false" aria-controls="collapseThree">
+                                            {{ 'Colori'|_ }} <i class="fa fa-chevron-down"></i>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                     data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <p>{{ 'Hagane è disponibile in nero. Per adesso.'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingFour">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link h4 btn-block text-left collapsed" type="button"
+                                                data-toggle="collapse" data-target="#collapseFour" aria-expanded="false"
+                                                aria-controls="collapseFour">
+                                            {{ 'Connettività ed elettronica'|_ }} <i class="fa fa-chevron-down"></i>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
+                                     data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <p>{{ 'La comunicazione tra Hagane e lo smartphone registrato avviene tramite Bluetooth Low Energy, che assicura la lunga durata della batteria interna. Il flusso dati viene protetto da un sistema di autenticazione ellittica.'|_ }}</p>
+
+                                        <p>{{ 'Oltre alle funzioni di riconoscimento del telefono registrato, di apertura e di chiusura, la App Hagane offre pratiche funzioni per la localizzazione del mezzo (geolocalizzazione di parking), la sua condivisione e la possibilità di effettuare l’apertura del lucchetto nel caso ti trovi senza telefono.'|_ }}</p>
+
+                                        <p>{{ 'Il grado di protezione dagli agenti atmosferici del cuore elettronico di Hagane è IP65, il che significa che è completamente ermetico e protetto da getti d’acqua.'|_ }}</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingFive">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link h4 btn-block text-left collapsed" type="button"
+                                                data-toggle="collapse" data-target="#collapseFive" aria-expanded="false"
+                                                aria-controls="collapseFive">
+                                            {{ 'Batteria'|_ }} <i class="fa fa-chevron-down"></i>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseFive" class="collapse" aria-labelledby="headingFive"
+                                     data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <p>{{ 'Con un uso medio, la batteria interna garantisce al lucchetto due anni di autonomia. Le sue temperature di operatività vanno dai -20° ai +80°. La batteria può essere sostituita.'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" id="headingSix">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link h4 btn-block text-left collapsed" type="button"
+                                                data-toggle="collapse" data-target="#collapseSix" aria-expanded="false"
+                                                aria-controls="collapseSix">
+                                            {{ 'Garanzia'|_ }} <i class="fa fa-chevron-down"></i>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseSix" class="collapse" aria-labelledby="headingSix"
+                                     data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <p>{{ 'Hagane è garantito 4 anni.'|_ }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!--<div class="row justify-content-start mt-small pt-small sep-row">
+        <div class="col-lg-4">
+            <section class="section section-content clearfix text-right"
+                     data-arts-os-animation="data-arts-os-animation">
+                <div class="section-content__inner">
+                    <div class="w-100"></div>
+                    <div class="section-content__heading split-text js-split-text mb-0-5"
+                         data-split-text-type="lines,words" data-split-text-set="words">
+                        <h4 class="h2">Requisiti App</h4>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="col-lg-7 offset-lg-1">
+            <section class="section section-content clearfix" data-arts-os-animation="data-arts-os-animation">
+                <div class="section-content__inner">
+                    <div class="w-100"></div>
+                    <div class="section-content__text split-text js-split-text" data-split-text-type="lines"
+                         data-split-text-set="lines">
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                            invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+                            et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+                            Lorem ipsum dolor sit amet. </p>
+
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+                            invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+                            et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+                            Lorem ipsum dolor sit amet. </p>
+
+                        <div class="row mt-4">
+                            <div class="col-lg-9">
+                                <div class="flex social-btns">
+                                  <a class="app-btn p-0" href="#">
+                                    <img src="{{ 'assets/img/assets/google-play-btn.svg'|theme }}">
+                                  </a>
+                                  <a class="app-btn p-0" href="#">
+                                    <img src="{{ 'assets/img/assets/app-store-btn.svg'|theme }}">
+                                  </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>-->
+    <div class="row justify-content-start mt-small pt-small sep-row">
+        <div class="col-lg-4">
+            <section class="section section-content clearfix text-right"
+                     data-arts-os-animation="data-arts-os-animation">
+                <div class="section-content__inner">
+                    <div class="w-100"></div>
+                    <div class="section-content__heading split-text js-split-text mb-0-5"
+                         data-split-text-type="lines,words" data-split-text-set="words">
+                        <h4 class="h2">{{ 'Contenuto della Confezione'|_ }}</h4>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="col-lg-7 offset-lg-1">
+            <section class="section section-content clearfix" data-arts-os-animation="data-arts-os-animation">
+                <div class="section-content__inner">
+                    <div class="w-100"></div>
+                    <div class="section-content__text split-text js-split-text" data-split-text-type="lines"
+                         data-split-text-set="lines">
+                        <p>{{ 'Nella confezione che ti arriverà a casa troverai solo il lucchetto: non ti serve altro! 
+                        <br>Per iniziare ad usare il tuo Hagane dovrai scaricare l\'App e attivare il prodotto tramite il QR Code stampato sul tubo del lucchetto.'|_ }}</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class="text-center my-medium">
+        <a href="{{ 'faq'|page }}" class="underline">{{ 'Vuoi saperne di più? Chiedicelo.'|_ }}</a>
+    </div>
+    <!--<div class="info mt-medium pt-small">
+        <ol>
+            <li>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo. Lorem
+                ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+                dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo.
+            </li>
+            <li>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo. Lorem
+                ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+                dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo.
+            </li>
+            <li>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo. Lorem
+                ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+                dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo.
+            </li>
+        </ol>
+    </div>-->
+</div>
+<!-- - section CONTENT #2 -->
+
+
+{% partial 'cta' %}
+
+
+{% put scripts %}
+<script type="text/javascript">
+    $(function () {
+
+        //Select the first tab and div by default
+        $('#tab_nav > ul > li > a').eq(0).addClass("active");
+        $('#tab_nav > div').eq(0).addClass("active");
+
+        //EVENT DELEGATION
+        //This assigns an onclick event listener to the UL tag.
+        //Then it checks what A tag was selected.
+        $('#tab_nav > ul').on('click', 'a', function () {
+            var aElement = $('#tab_nav > ul > li > a');
+            var divContent = $('#tab_nav > div');
+
+            /*Handle Tab Nav*/
+            aElement.removeClass("active");
+            $(this).addClass("active");
+
+            /*Handle Tab Content*/
+            var clicked_index = aElement.index(this);
+            divContent.fadeOut(200);
+            divContent.eq(clicked_index).delay(100).fadeIn();
+
+            $(this).blur();
+            return false;
+        });
+    });
+</script>
+{% endput %}

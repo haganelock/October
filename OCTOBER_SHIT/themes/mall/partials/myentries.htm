@@ -1,0 +1,11 @@
+{% partial __SELF__ ~ '::loader' %}
+
+{% if items.count %}
+    {% partial 'myitems' items=items %}
+{% else %}
+    {% partial __SELF__ ~ '::empty' %}
+{% endif %}
+
+{% if __SELF__.dataLayer %}
+    {% partial __SELF__ ~ '::datalayer' %}
+{% endif %}

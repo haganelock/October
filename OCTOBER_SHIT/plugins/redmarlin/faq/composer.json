@@ -1,0 +1,8 @@
+{
+    "name": "redmarlin/faq-plugin",
+    "type": "october-plugin",
+    "description": "None",
+    "require": {
+        "composer/installers": "~1.0"
+    }
+}
