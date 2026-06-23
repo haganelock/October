@@ -353,6 +353,7 @@
     prod_secure: { en: "Secure payment with Stripe" },
     prod_add: { en: "Buy now" },
     prod_old: { en: "was" },
+    price_ship: { en: "+ shipping" },
 
     /* legal shared */
     legal_back: { en: "← Back to home" },

@@ -126,6 +126,7 @@ body.overlay-menu-opened .hgx-mobile { display: block; }
 .model p { color: var(--muted); font-size: 15px; min-height: 66px; }
 .model-price { font-size: 30px; font-weight: 700; margin: 16px 0 20px; }
 .model-price s { color: #b6b2aa; font-weight: 500; font-size: 18px; margin-left: 8px; }
+.model-price .price-ship { display: block; color: var(--muted); font-weight: 500; font-size: 14px; margin-top: 4px; }
 .model .btn { width: 100%; }
 .secure { text-align: center; color: var(--muted); font-size: 14px; margin-top: 26px; }
 
