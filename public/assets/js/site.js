@@ -214,7 +214,6 @@
     hp_cta_save: { en: "Save 50%" },
     hp_cta_how: { en: "How it works" },
     hp_how_title: { en: "How it works" },
-    hp_how_sub: { en: "Bluetooth and hands-free mode: control Hagane without even taking your phone out of your pocket." },
     hp_feat_title: { en: "Why Hagane" },
     hp_feat_sub: { en: "No keys, no keyhole to force. Just steel and an app." },
     hp_uses_title: { en: "For every set of two wheels" },
